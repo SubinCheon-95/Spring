@@ -1,5 +1,5 @@
 :root {
-    --blue: #4b91ff;
+    --blue: #336AFD;
     --deep-gray: #2f2f2f;
     --gray-900: #1f2937;
     --gray-800: #374151;
@@ -99,10 +99,12 @@ main.main,
 
 /* 서브 링크(로그인/회원가입/고객센터) */
 .utility-nav {
-    padding: 6px 16px;
+    padding: 7px 0;
     text-align: right;
     font-size: 13px;
+    font-weight: bold;
     color: var(--gray-700);
+    background-color: #F3FBFF;
 }
 
 .utility-list {
@@ -115,7 +117,7 @@ main.main,
 }
 
 .utility a:hover {
-    color: var(--gray-900);
+    color: var(--blue);
     text-decoration: underline;
 }
 
@@ -129,6 +131,7 @@ main.main,
 }
 
 .logo {
+    flex: 0 0 auto;
     display: inline-flex;
     align-items: flex-end;
     gap: 2px;
@@ -142,15 +145,16 @@ main.main,
 
 /* 검색창 전체 + 인풋박스 + 검색 버튼 */
 .search-bar {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .search-bar_group {
     display: flex;
     align-items: center;
+    width: 100%;
+    max-width: 600px;
     border: 2px solid var(--blue);
     overflow: hidden;
 }
@@ -209,6 +213,7 @@ main.main,
     gap: 2px;
     color: var(--gray-700);
     font-size: 12px;
+    text-align: center;
 }
 
 .quick-action svg {
@@ -230,43 +235,46 @@ main.main,
 .main-nav {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 10px 16px;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    gap: 30px;
+    padding: 13px 0;
     position: relative;
 }
 
 .main-nav_all {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 8px;
-    border: 0;
-    background: transparent;
+    padding: 10px 14px;
+    font-size: 15px;
+    font-weight: 600;
+    background: white;
+    border: none;
     cursor: pointer;
-    padding: 8px 10px;
-    border-radius: 6px;
-    color: var(--gray-900);
+    transition: background 0.2s;
 }
 
 .main-nav_all:hover {
-    background: var(--gray-100);
+    color: var(--blue);
+}
+
+.main-nav_all svg {
+    stroke: currentColor;
 }
 
 .main-nav_links {
     display: flex;
-    gap: 18px;
+    gap: 30px;
+    font-size: 15px;
     font-weight: 600;
 }
 
 .main-nav_links a {
     color: var(--gray-800);
     padding: 8px 6px;
-    border-radius: 4px;
 }
 
 .main-nav_links a:hover {
-    background: var(--gray-100);
+    color: var(--blue);
 }
 
 /* 전체 카테고리 드롭 다운 */
