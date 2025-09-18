@@ -1,219 +1,211 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>큐팡 | 홈</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cupang::홈</title>
+    <link rel="stylesheet" th:href="@{/style_index.css}">
 </head>
+
 <body>
-    <div class="qp-page">
-    <header class="qp-header" role="banner">
-      <!-- Top banners (2 types) -->
-      <div class="qp-top-banners">
-        <a href="promo_shipping.html" class="qp-top-banner qp-top-banner--shipping" aria-label="오늘 12시까지 주문 시 로켓배송 내일 도착">
-          <span class="qp-top-banner__text">오늘 12시까지 주문 시 로켓배송 내일 도착!</span>
-        </a>
-        <a href="promo_earlybird.html" class="qp-top-banner qp-top-banner--promo" aria-label="얼리버드 할인 이벤트">
-          <span class="qp-top-banner__text">얼리버드 특가 쿠폰 받기</span>
-        </a>
-      </div>
+    <div class="page">
+        <header class="header" role="banner">
 
-      <!-- Utility -->
-      <div class="qp-utility qp-container">
-        <nav aria-label="유틸리티">
-          <ul class="qp-utility__list">
-            <li><a href="login.html">로그인</a></li>
-            <li><a href="signup.html">회원가입</a></li>
-            <li><a href="help.html">고객센터</a></li>
-          </ul>
-        </nav>
-      </div>
+            <!-- 최상단 광고 배너 -->
+            <div class="top-banners">
+                <a href="#" class="top-banner top-banner--shipping" aria-label="오늘 12시까지 주문 시 로켓배송 내일 도착">
+                    <span class="top-banner__text">오늘 12시까지 주문 시 로켓배송 내일 도착!</span>
+                </a>
+                <a href="#" class="top-banner top-banner--promo" aria-label="얼리버드 할인 이벤트">
+                    <span class="top-banner__text">얼리버드 특가 쿠폰 받기</span>
+                </a>
+            </div>
 
-      <!-- Brand row -->
-      <div class="qp-brand qp-container">
-        <a href="index.html" class="qp-logo" aria-label="큐팡 홈">
-          <span class="qp-logo__q">q</span><span class="qp-logo__u">u</span><span class="qp-logo__p">p</span><span class="qp-logo__a">a</span><span class="qp-logo__n">n</span><span class="qp-logo__g">g</span>
-        </a>
+            <!-- 로그인 + 회원가입 + 고객센터 -->
+            <div class="utility-nav container">
+                <nav aria-label="유틸리티">
+                    <ul class="utility-list">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-        <form class="qp-search" role="search" aria-label="사이트 검색">
-          <label for="search-input" class="visually-hidden">검색어</label>
-          <div class="qp-search__group">
-            <select class="qp-search__category" aria-label="카테고리 선택">
-              <option value="all">전체</option>
-              <option>식품</option>
-              <option>가전</option>
-              <option>패션</option>
-              <option>뷰티</option>
-            </select>
-            <input id="search-input" class="qp-search__input" type="search" placeholder="찾고 싶은 상품을 검색해보세요" />
-            <button type="submit" class="qp-search__button" aria-label="검색">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle>
-                <path d="M20 20L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-              </svg>
-            </button>
-          </div>
-        </form>
+            <!-- Brand row -->
+            <div class="brand-row container">
+                <a href="#" class="logo" aria-label="큐팡 홈">
+                    <img th:src="@{/images/cupang_logo(color).png}" alt="큐팡 로고" class="logo-img">
+                </a>
 
-        <div class="qp-actions" aria-label="바로가기">
-          <a href="wishlist.html" class="qp-action" aria-label="찜">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 21s-6.5-4.35-9-8c-2-2.94.2-7 4-7 2.1 0 3.4 1.2 5 3 1.6-1.8 2.9-3 5-3 3.8 0 6 4.06 4 7-2.5 3.65-9 8-9 8z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"></path>
-            </svg>
-            <span>찜</span>
-          </a>
-          <a href="mypage.html" class="qp-action" aria-label="마이페이지">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"></circle>
-              <path d="M4 20c1.5-4 6-6 8-6s6.5 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            </svg>
-            <span>마이</span>
-          </a>
-          <a href="cart.html" class="qp-action" aria-label="장바구니">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M6 6h15l-2 9H8L6 6z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"></path>
-              <circle cx="9" cy="20" r="1.75" fill="currentColor"></circle>
-              <circle cx="18" cy="20" r="1.75" fill="currentColor"></circle>
-            </svg>
-            <span>장바구니</span>
-          </a>
-        </div>
-      </div>
+                <form class="search-bar" role="search" aria-label="사이트 검색">
+                    <label for="search-input" class="visually-hidden">검색어</label>
+                    <div class="search-bar_group">
+                        <select class="search-bar_category" aria-label="카테고리 선택">
+                            <option value="all">전체</option>
+                            <option>식품</option>
+                            <option>가전</option>
+                            <option>패션</option>
+                            <option>뷰티</option>
+                        </select>
+                        <input id="search-input" class="search-bar_input" type="search" placeholder="찾고 싶은 상품을 검색해보세요" />
+                        <button type="submit" class="search-bar_button" aria-label="검색">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle>
+                                <path d="M20 20L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
 
-      <!-- GNB -->
-      <nav class="qp-gnb qp-container" aria-label="메인 메뉴">
-        <button class="qp-gnb__all" aria-label="전체 카테고리" aria-expanded="false">
-          <span class="qp-gnb__all-icon" aria-hidden="true">
+                <div class="quick-actions" aria-label="바로가기">
+                    <a href="#" class="quick-action" aria-label="찜">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 21s-6.5-4.35-9-8c-2-2.94.2-7 4-7 2.1 0 3.4 1.2 5 3 1.6-1.8 2.9-3 5-3 3.8 0 6 4.06 4 7-2.5 3.65-9 8-9 8z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"></path>
+                        </svg>
+                        <span>찜</span>
+                    </a>
+                    <a href="#" class="quick-action" aria-label="마이페이지">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"></circle>
+                            <path d="M4 20c1.5-4 6-6 8-6s6.5 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                        </svg>
+                        <span>마이페이지</span>
+                    </a>
+                    <a href="#" class="quick-action" aria-label="장바구니">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M6 6h15l-2 9H8L6 6z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"></path>
+                            <circle cx="9" cy="20" r="1.75" fill="currentColor"></circle>
+                            <circle cx="18" cy="20" r="1.75" fill="currentColor"></circle>
+                        </svg>
+                        <span>장바구니</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- GNB -->
+            <nav class="main-nav container" aria-label="메인 메뉴">
+                <button class="main-nav_all" aria-label="전체 카테고리" aria-expanded="false">
+          <span class="main-nav_all-icon" aria-hidden="true">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
               <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             </svg>
           </span>
-          <span>전체카테고리</span>
-        </button>
-        <ul class="qp-gnb__links">
-          <li><a href="#hit">히트상품</a></li>
-          <li><a href="#recommend">추천상품</a></li>
-          <li><a href="#popular">인기상품</a></li>
-          <li><a href="#discount">할인상품</a></li>
-        </ul>
-        <div class="qp-cate" id="qp-cate">
-          <ul class="qp-cate__lv1" id="qp-cate-lv1"></ul>
-          <div class="qp-cate__lv2" id="qp-cate-lv2" aria-label="2차 카테고리"></div>
-        </div>
-      </nav>
+                    <span>전체카테고리</span>
+                </button>
+                <ul class="main-nav_links">
+                    <li><a href="#">히트상품</a></li>
+                    <li><a href="#">추천상품</a></li>
+                    <li><a href="#">인기상품</a></li>
+                    <li><a href="#">할인상품</a></li>
+                </ul>
+                <div class="category-drawer" id="category-drawer">
+                    <ul class="category-drawer_lv1" id="category-drawer-lv1"></ul>
+                    <div class="category-drawer_lv2" id="category-drawer-lv2" aria-label="2차 카테고리"></div>
+                </div>
+            </nav>
 
-    </header>
+        </header>
 
-    <!-- Sticky right side banner inside header scope -->
-    <aside class="qp-side-banner" aria-label="사이드 배너">
-      <a href="#" class="qp-side-banner__card">
-        <span class="qp-side-banner__title">행운의 쿠폰</span>
-        <span class="qp-side-banner__cta">받기</span>
-      </a>
-    </aside>
-
-    <main class="qp-main">
-      <!-- 메인은 이후 단계에서 구현 예정. 위치 확인용 앵커만 배치 -->
-      <section id="hit"></section>
-      <section id="recommend"></section>
-      <section id="popular"></section>
-      <section id="discount"></section>
-      <section style="height: 1200px"></section>
-     </main>
-
+        <main class="main">
+            <!-- 메인은 이후 단계에서 구현 예정. 위치 확인용 앵커만 배치 -->
+            <section id="hit"></section>
+            <section id="recommend"></section>
+            <section id="popular"></section>
+            <section id="discount"></section>
+            <section style="height: 1200px"></section>
+        </main>
     </div>
 
     <script>
-      // Search routing to results page with query string
-      (function(){
-        const form = document.querySelector('.qp-search');
-        const input = document.getElementById('search-input');
-        const category = document.querySelector('.qp-search__category');
-        form.addEventListener('submit', function(e){
-          e.preventDefault();
-          const q = encodeURIComponent(input.value.trim());
-          const cat = encodeURIComponent(category.value);
-          const url = `search.html?category=${cat}&q=${q}`;
-          window.location.href = url;
-        });
-      })();
+        (function(){
+            const form = document.querySelector('.search-bar');
+            const input = document.getElementById('search-bar-input');
+            const category = document.querySelector('.search-bar_category');
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                const q = encodeURIComponent(input.value.trim());
+                const cat = encodeURIComponent(category.value);
+                const url = `search.html?category=${cat}&q=${q}`;
+                window.location.href = url;
+            });
+        })();
 
-      // Category data
-      const CATEGORY_DATA = {
-        '패션의류': ['여성브랜드패션','여성트렌드패션','남성패션','캐주얼/유니섹스','언더웨어','가방/지갑','모자/잡화/ACC','시계/쥬얼리','슈즈/운동화'],
-        '패션잡화': ['가방/지갑','모자/잡화/ACC','시계/쥬얼리','슈즈/운동화','우산/양산','벨트/장갑'],
-        '뷰티': ['스킨케어','남성화장품','메이크업','헤어케어','바디케어','향수','미용소품','미용기기','뷰티샵','이너뷰티'],
-        '스포츠/레저': ['골프','캠핑','자전거','수영','구기/라켓','헬스/요가'],
-        '생활/주방': ['주방용품','생활용품','세탁/청소용품','수납/정리','욕실용품'],
-        '가구/인테리어': ['거실가구','침실가구','주방가구','수납가구','인테리어소품'],
-        '출산/유아동': ['기저귀/물티슈','분유/이유식','유모차/카시트','유아용품','장난감'],
-        '디지털/가전': ['노트북/태블릿','데스크탑','모니터','카메라','주방가전','생활가전'],
-        '여행/도서': ['여행용품','문구/사무','도서','악기'],
-        '반려동물': ['강아지용품','고양이용품','사료','간식','위생/배변']
-      };
+        // Category data
+        const CATEGORY_DATA = {
+            '패션의류': ['여성브랜드패션','여성트렌드패션','남성패션','캐주얼/유니섹스','언더웨어','가방/지갑','모자/잡화/ACC','시계/쥬얼리','슈즈/운동화'],
+            '패션잡화': ['가방/지갑','모자/잡화/ACC','시계/쥬얼리','슈즈/운동화','우산/양산','벨트/장갑'],
+            '뷰티': ['스킨케어','남성화장품','메이크업','헤어케어','바디케어','향수','미용소품','미용기기','뷰티샵','이너뷰티'],
+            '스포츠/레저': ['골프','캠핑','자전거','수영','구기/라켓','헬스/요가'],
+            '생활/주방': ['주방용품','생활용품','세탁/청소용품','수납/정리','욕실용품'],
+            '가구/인테리어': ['거실가구','침실가구','주방가구','수납가구','인테리어소품'],
+            '출산/유아동': ['기저귀/물티슈','분유/이유식','유모차/카시트','유아용품','장난감'],
+            '디지털/가전': ['노트북/태블릿','데스크탑','모니터','카메라','주방가전','생활가전'],
+            '여행/도서': ['여행용품','문구/사무','도서','악기'],
+            '반려동물': ['강아지용품','고양이용품','사료','간식','위생/배변']
+        };
 
-      // Drawer behavior
-      (function(){
-        const toggleBtn = document.querySelector('.qp-gnb__all');
-        const drawer = document.getElementById('qp-cate');
-        const lv1 = document.getElementById('qp-cate-lv1');
-        const lv2 = document.getElementById('qp-cate-lv2');
+        // Drawer behavior
+        (function(){
+            const toggleBtn = document.querySelector('.main-nav_all');
+            const drawer = document.getElementById('main-nav');
+            const lv1 = document.getElementById('main-nav-lv1');
+            const lv2 = document.getElementById('main-nav-lv2');
 
-        // Populate level 1
-        Object.keys(CATEGORY_DATA).forEach((name, index) => {
-          const li = document.createElement('li');
-          li.textContent = name;
-          li.setAttribute('data-key', name);
-          if(index === 0) li.classList.add('is-active');
-          lv1.appendChild(li);
-        });
+            // Populate level 1
+            Object.keys(CATEGORY_DATA).forEach((name, index) => {
+                const li = document.createElement('li');
+                li.textContent = name;
+                li.setAttribute('data-key', name);
+                if(index === 0) li.classList.add('is-active');
+                lv1.appendChild(li);
+            });
 
-        function renderLv2(key){
-          lv2.innerHTML = '';
-          (CATEGORY_DATA[key] || []).forEach(label => {
-            const a = document.createElement('a');
-            a.href = `category.html?lv1=${encodeURIComponent(key)}&lv2=${encodeURIComponent(label)}`;
-            a.textContent = label;
-            lv2.appendChild(a);
-          });
-        }
+            function renderLv2(key){
+                lv2.innerHTML = '';
+                (CATEGORY_DATA[key] || []).forEach(label => {
+                    const a = document.createElement('a');
+                    a.href = `category.html?lv1=${encodeURIComponent(key)}&lv2=${encodeURIComponent(label)}`;
+                    a.textContent = label;
+                    lv2.appendChild(a);
+                });
+            }
 
-        renderLv2(Object.keys(CATEGORY_DATA)[0]);
+            renderLv2(Object.keys(CATEGORY_DATA)[0]);
 
-        lv1.addEventListener('mouseover', function(e){
-          const item = e.target.closest('li');
-          if(!item) return;
-          lv1.querySelectorAll('li').forEach(li=>li.classList.remove('is-active'));
-          item.classList.add('is-active');
-          renderLv2(item.getAttribute('data-key'));
-        });
+            lv1.addEventListener('mouseover', function(e){
+                const item = e.target.closest('li');
+                if(!item) return;
+                lv1.querySelectorAll('li').forEach(li=>li.classList.remove('is-active'));
+                item.classList.add('is-active');
+                renderLv2(item.getAttribute('data-key'));
+            });
 
-        // Toggle drawer and icon
-        function setIcon(open){
-          const iconWrap = toggleBtn.querySelector('.qp-gnb__all-icon');
-          iconWrap.innerHTML = open ?
-            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' :
-            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
-        }
+            // Toggle drawer and icon
+            function setIcon(open){
+                const iconWrap = toggleBtn.querySelector('.search-bar_all-icon');
+                iconWrap.innerHTML = open ?
+                    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' :
+                    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+            }
 
-        toggleBtn.addEventListener('click', function(){
-          const isOpen = drawer.classList.toggle('qp-cate--open');
-          toggleBtn.setAttribute('aria-expanded', String(isOpen));
-          setIcon(isOpen);
-        });
+            toggleBtn.addEventListener('click', function(){
+                const isOpen = drawer.classList.toggle('qp-cate--open');
+                toggleBtn.setAttribute('aria-expanded', String(isOpen));
+                setIcon(isOpen);
+            });
 
-        // Close drawer on outside click
-        document.addEventListener('click', function(e){
-          const within = e.target.closest('.qp-gnb');
-          if(!within && drawer.classList.contains('qp-cate--open')){
-            drawer.classList.remove('qp-cate--open');
-            toggleBtn.setAttribute('aria-expanded', 'false');
-            setIcon(false);
-          }
-        });
-      })();
+            // Close drawer on outside click
+            document.addEventListener('click', function(e){
+                const within = e.target.closest('.category-drawer');
+                if(!within && drawer.classList.contains('category-drawer-open')){
+                    drawer.classList.remove('category-drawer-open');
+                    toggleBtn.setAttribute('aria-expanded', 'false');
+                    setIcon(false);
+                }
+            });
+        })();
     </script>
 
 </body>
 </html>
-
