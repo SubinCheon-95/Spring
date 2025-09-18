@@ -1,0 +1,290 @@
+2025-09-18T11:22:46.110+09:00  INFO 11220 --- [ch04] [Test worker] kr.co.ch04.mapper.User1MapperTest        : Starting User1MapperTest using Java 21.0.8 with PID 11220 (started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T11:22:46.112+09:00  INFO 11220 --- [ch04] [Test worker] kr.co.ch04.mapper.User1MapperTest        : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T11:22:47.405+09:00  INFO 11220 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T11:22:47.713+09:00  INFO 11220 --- [ch04] [Test worker] kr.co.ch04.mapper.User1MapperTest        : Started User1MapperTest in 1.895 seconds (process running for 3.066)
+2025-09-18T11:22:48.361+09:00  INFO 11220 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-18T11:22:48.366+09:00  WARN 11220 --- [ch04] [Test worker] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-18T12:39:14.581+09:00  INFO 3680 --- [ch04] [Test worker] kr.co.ch04.mapper.User1MapperTest        : Starting User1MapperTest using Java 21.0.8 with PID 3680 (started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T12:39:14.583+09:00  INFO 3680 --- [ch04] [Test worker] kr.co.ch04.mapper.User1MapperTest        : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T12:39:15.893+09:00  INFO 3680 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T12:39:16.206+09:00  INFO 3680 --- [ch04] [Test worker] kr.co.ch04.mapper.User1MapperTest        : Started User1MapperTest in 1.917 seconds (process running for 3.288)
+2025-09-18T12:39:16.873+09:00  INFO 3680 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-18T12:39:16.877+09:00  WARN 3680 --- [ch04] [Test worker] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-18T12:39:30.524+09:00  INFO 8744 --- [ch04] [Test worker] kr.co.ch04.mapper.User1MapperTest        : Starting User1MapperTest using Java 21.0.8 with PID 8744 (started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T12:39:30.526+09:00  INFO 8744 --- [ch04] [Test worker] kr.co.ch04.mapper.User1MapperTest        : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T12:39:31.928+09:00  INFO 8744 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T12:39:32.377+09:00  INFO 8744 --- [ch04] [Test worker] kr.co.ch04.mapper.User1MapperTest        : Started User1MapperTest in 2.17 seconds (process running for 3.442)
+2025-09-18T12:39:33.129+09:00  INFO 8744 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-18T12:39:33.134+09:00  WARN 8744 --- [ch04] [Test worker] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-18T12:39:40.566+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 13388 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T12:39:40.568+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T12:39:40.604+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\GGG\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc11\23.7.0.25.01\665f52abef9122ce003b5cfc1d9d44f7302e2cfe\ojdbc11-23.7.0.25.01.jar referenced one or more files that do not exist: file:/C:/Users/GGG/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc11/23.7.0.25.01/665f52abef9122ce003b5cfc1d9d44f7302e2cfe/oraclepki.jar
+2025-09-18T12:39:40.604+09:00  INFO 13388 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-18T12:39:40.605+09:00  INFO 13388 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-18T12:39:41.431+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T12:39:41.444+09:00  INFO 13388 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T12:39:41.445+09:00  INFO 13388 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T12:39:41.479+09:00  INFO 13388 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T12:39:41.479+09:00  INFO 13388 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 874 ms
+2025-09-18T12:39:41.770+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T12:39:42.018+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T12:39:42.045+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T12:39:42.051+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 1.887 seconds (process running for 2.423)
+2025-09-18T12:40:16.927+09:00  INFO 13388 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-18T12:40:16.933+09:00  INFO 13388 --- [ch04] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T12:40:16.939+09:00  INFO 13388 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T12:40:17.030+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 13388 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T12:40:17.030+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T12:40:17.256+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T12:40:17.256+09:00  INFO 13388 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T12:40:17.256+09:00  INFO 13388 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T12:40:17.269+09:00  INFO 13388 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T12:40:17.269+09:00  INFO 13388 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 236 ms
+2025-09-18T12:40:17.316+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T12:40:17.368+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T12:40:17.375+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T12:40:17.378+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 0.376 seconds (process running for 37.75)
+2025-09-18T12:40:17.379+09:00  INFO 13388 --- [ch04] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-18T12:41:12.852+09:00  INFO 13388 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-18T12:41:12.854+09:00  INFO 13388 --- [ch04] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T12:41:12.857+09:00  INFO 13388 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T12:41:12.953+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 13388 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T12:41:12.953+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T12:41:13.172+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T12:41:13.173+09:00  INFO 13388 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T12:41:13.173+09:00  INFO 13388 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T12:41:13.184+09:00  INFO 13388 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T12:41:13.184+09:00  INFO 13388 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 228 ms
+2025-09-18T12:41:13.224+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T12:41:13.267+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T12:41:13.275+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T12:41:13.276+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 0.357 seconds (process running for 93.649)
+2025-09-18T12:41:13.277+09:00  INFO 13388 --- [ch04] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-18T12:42:46.123+09:00  INFO 13388 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-18T12:42:46.124+09:00  INFO 13388 --- [ch04] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T12:42:46.128+09:00  INFO 13388 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T12:42:46.184+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 13388 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T12:42:46.184+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T12:42:46.356+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T12:42:46.357+09:00  INFO 13388 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T12:42:46.357+09:00  INFO 13388 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T12:42:46.368+09:00  INFO 13388 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T12:42:46.368+09:00  INFO 13388 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 182 ms
+2025-09-18T12:42:46.411+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T12:42:46.472+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T12:42:46.481+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T12:42:46.484+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 0.318 seconds (process running for 186.856)
+2025-09-18T12:42:46.485+09:00  INFO 13388 --- [ch04] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-18T12:47:24.830+09:00  INFO 13388 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-18T12:47:24.831+09:00  INFO 13388 --- [ch04] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T12:47:24.834+09:00  INFO 13388 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T12:47:24.890+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 13388 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T12:47:24.890+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T12:47:25.053+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T12:47:25.053+09:00  INFO 13388 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T12:47:25.053+09:00  INFO 13388 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T12:47:25.064+09:00  INFO 13388 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T12:47:25.064+09:00  INFO 13388 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 173 ms
+2025-09-18T12:47:25.102+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T12:47:25.147+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T12:47:25.155+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T12:47:25.157+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 0.287 seconds (process running for 465.53)
+2025-09-18T12:47:25.157+09:00  INFO 13388 --- [ch04] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-18T12:49:48.657+09:00  INFO 13388 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2025-09-18T12:49:48.658+09:00  INFO 13388 --- [ch04] [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T12:49:48.661+09:00  INFO 13388 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T12:49:48.732+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 13388 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T12:49:48.732+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T12:49:48.937+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T12:49:48.937+09:00  INFO 13388 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T12:49:48.937+09:00  INFO 13388 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T12:49:48.948+09:00  INFO 13388 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T12:49:48.948+09:00  INFO 13388 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 212 ms
+2025-09-18T12:49:48.992+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T12:49:49.040+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T12:49:49.048+09:00  INFO 13388 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T12:49:49.050+09:00  INFO 13388 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 0.34 seconds (process running for 609.423)
+2025-09-18T12:49:49.051+09:00  INFO 13388 --- [ch04] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-18T17:13:53.077+09:00  INFO 11240 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 11240 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T17:13:53.079+09:00  INFO 11240 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T17:13:53.116+09:00  INFO 11240 --- [ch04] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\GGG\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc11\23.7.0.25.01\665f52abef9122ce003b5cfc1d9d44f7302e2cfe\ojdbc11-23.7.0.25.01.jar referenced one or more files that do not exist: file:/C:/Users/GGG/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc11/23.7.0.25.01/665f52abef9122ce003b5cfc1d9d44f7302e2cfe/oraclepki.jar
+2025-09-18T17:13:53.116+09:00  INFO 11240 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-18T17:13:53.116+09:00  INFO 11240 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-18T17:13:53.993+09:00  INFO 11240 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T17:13:54.004+09:00  INFO 11240 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T17:13:54.005+09:00  INFO 11240 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T17:13:54.041+09:00  INFO 11240 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T17:13:54.042+09:00  INFO 11240 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 925 ms
+2025-09-18T17:13:54.380+09:00  INFO 11240 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T17:13:54.628+09:00  INFO 11240 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T17:13:54.656+09:00  INFO 11240 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T17:13:54.663+09:00  INFO 11240 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 1.998 seconds (process running for 2.526)
+2025-09-18T17:14:04.154+09:00  INFO 11240 --- [ch04] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T17:14:04.158+09:00  INFO 11240 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T17:14:06.596+09:00  INFO 14988 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 14988 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T17:14:06.598+09:00  INFO 14988 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T17:14:06.636+09:00  INFO 14988 --- [ch04] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\GGG\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc11\23.7.0.25.01\665f52abef9122ce003b5cfc1d9d44f7302e2cfe\ojdbc11-23.7.0.25.01.jar referenced one or more files that do not exist: file:/C:/Users/GGG/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc11/23.7.0.25.01/665f52abef9122ce003b5cfc1d9d44f7302e2cfe/oraclepki.jar
+2025-09-18T17:14:06.636+09:00  INFO 14988 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-18T17:14:06.636+09:00  INFO 14988 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-18T17:14:07.468+09:00  INFO 14988 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T17:14:07.480+09:00  INFO 14988 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T17:14:07.480+09:00  INFO 14988 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T17:14:07.512+09:00  INFO 14988 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T17:14:07.512+09:00  INFO 14988 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 875 ms
+2025-09-18T17:14:07.789+09:00  INFO 14988 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T17:14:08.033+09:00  INFO 14988 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T17:14:08.061+09:00  INFO 14988 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T17:14:08.069+09:00  INFO 14988 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 1.877 seconds (process running for 2.408)
+2025-09-18T17:15:29.340+09:00  INFO 14988 --- [ch04] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T17:15:29.344+09:00  INFO 14988 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T17:15:40.722+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 17900 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T17:15:40.724+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T17:15:40.762+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\GGG\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc11\23.7.0.25.01\665f52abef9122ce003b5cfc1d9d44f7302e2cfe\ojdbc11-23.7.0.25.01.jar referenced one or more files that do not exist: file:/C:/Users/GGG/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc11/23.7.0.25.01/665f52abef9122ce003b5cfc1d9d44f7302e2cfe/oraclepki.jar
+2025-09-18T17:15:40.762+09:00  INFO 17900 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-18T17:15:40.762+09:00  INFO 17900 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-18T17:15:41.666+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T17:15:41.677+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T17:15:41.677+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T17:15:41.709+09:00  INFO 17900 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T17:15:41.710+09:00  INFO 17900 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 948 ms
+2025-09-18T17:15:42.003+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T17:15:42.271+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T17:15:42.297+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T17:15:42.304+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 1.984 seconds (process running for 2.636)
+2025-09-18T17:16:56.898+09:00  INFO 17900 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-09-18T17:16:56.901+09:00  INFO 17900 --- [ch04] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T17:16:56.906+09:00  INFO 17900 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T17:16:56.992+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 17900 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T17:16:56.993+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T17:16:57.315+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T17:16:57.316+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T17:16:57.316+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T17:16:57.329+09:00  INFO 17900 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T17:16:57.330+09:00  INFO 17900 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 334 ms
+2025-09-18T17:16:57.371+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T17:16:57.418+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T17:16:57.425+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T17:16:57.428+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 0.466 seconds (process running for 77.759)
+2025-09-18T17:16:57.429+09:00  INFO 17900 --- [ch04] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-18T17:16:58.845+09:00  INFO 17900 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-09-18T17:16:58.846+09:00  INFO 17900 --- [ch04] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T17:16:58.850+09:00  INFO 17900 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T17:16:58.910+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 17900 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T17:16:58.910+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T17:16:59.090+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T17:16:59.091+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T17:16:59.091+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T17:16:59.103+09:00  INFO 17900 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T17:16:59.103+09:00  INFO 17900 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 191 ms
+2025-09-18T17:16:59.141+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T17:16:59.185+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T17:16:59.192+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T17:16:59.194+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 0.306 seconds (process running for 79.525)
+2025-09-18T17:16:59.195+09:00  INFO 17900 --- [ch04] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-18T17:18:49.065+09:00  INFO 17900 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-09-18T17:18:49.067+09:00  INFO 17900 --- [ch04] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T17:18:49.070+09:00  INFO 17900 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T17:18:49.129+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 17900 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T17:18:49.129+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T17:18:49.312+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T17:18:49.313+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T17:18:49.313+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T17:18:49.325+09:00  INFO 17900 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T17:18:49.325+09:00  INFO 17900 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 194 ms
+2025-09-18T17:18:49.364+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T17:18:49.409+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T17:18:49.417+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T17:18:49.419+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 0.311 seconds (process running for 189.751)
+2025-09-18T17:18:49.420+09:00  INFO 17900 --- [ch04] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-18T17:19:10.464+09:00  INFO 17900 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-18T17:19:10.466+09:00  INFO 17900 --- [ch04] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T17:19:10.470+09:00  INFO 17900 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T17:19:10.565+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 17900 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T17:19:10.565+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T17:19:10.817+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T17:19:10.817+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T17:19:10.817+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T17:19:10.830+09:00  INFO 17900 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T17:19:10.830+09:00  INFO 17900 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 263 ms
+2025-09-18T17:19:10.869+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T17:19:10.910+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T17:19:10.917+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T17:19:10.920+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 0.385 seconds (process running for 211.25)
+2025-09-18T17:19:10.921+09:00  INFO 17900 --- [ch04] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-18T17:19:35.715+09:00  INFO 17900 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 6 class path changes (0 additions, 0 deletions, 6 modifications)
+2025-09-18T17:19:35.716+09:00  INFO 17900 --- [ch04] [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T17:19:35.719+09:00  INFO 17900 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T17:19:35.775+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 17900 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T17:19:35.776+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T17:19:35.951+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T17:19:35.952+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T17:19:35.952+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T17:19:35.964+09:00  INFO 17900 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T17:19:35.964+09:00  INFO 17900 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 187 ms
+2025-09-18T17:19:36.010+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T17:19:36.051+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T17:19:36.059+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T17:19:36.061+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 0.306 seconds (process running for 236.393)
+2025-09-18T17:19:36.062+09:00  INFO 17900 --- [ch04] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-18T17:19:58.796+09:00  INFO 17900 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 6 class path changes (0 additions, 0 deletions, 6 modifications)
+2025-09-18T17:19:58.797+09:00  INFO 17900 --- [ch04] [Thread-23] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T17:19:58.800+09:00  INFO 17900 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T17:19:58.857+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 17900 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T17:19:58.857+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T17:19:59.029+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T17:19:59.030+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T17:19:59.030+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T17:19:59.041+09:00  INFO 17900 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T17:19:59.041+09:00  INFO 17900 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 182 ms
+2025-09-18T17:19:59.076+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T17:19:59.116+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T17:19:59.124+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T17:19:59.126+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 0.29 seconds (process running for 259.457)
+2025-09-18T17:19:59.126+09:00  INFO 17900 --- [ch04] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-18T17:20:09.673+09:00  INFO 17900 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 6 class path changes (0 additions, 0 deletions, 6 modifications)
+2025-09-18T17:20:09.674+09:00  INFO 17900 --- [ch04] [Thread-27] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T17:20:09.677+09:00  INFO 17900 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T17:20:09.731+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 17900 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T17:20:09.731+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T17:20:09.900+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T17:20:09.901+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T17:20:09.901+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T17:20:09.912+09:00  INFO 17900 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T17:20:09.912+09:00  INFO 17900 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 179 ms
+2025-09-18T17:20:09.948+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T17:20:09.991+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T17:20:09.999+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T17:20:10.001+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 0.291 seconds (process running for 270.332)
+2025-09-18T17:20:10.002+09:00  INFO 17900 --- [ch04] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-18T17:20:19.541+09:00  INFO 17900 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 6 class path changes (0 additions, 0 deletions, 6 modifications)
+2025-09-18T17:20:19.542+09:00  INFO 17900 --- [ch04] [Thread-31] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T17:20:19.545+09:00  INFO 17900 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T17:20:19.597+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 17900 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T17:20:19.598+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T17:20:19.776+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T17:20:19.776+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T17:20:19.776+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T17:20:19.787+09:00  INFO 17900 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T17:20:19.787+09:00  INFO 17900 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 188 ms
+2025-09-18T17:20:19.823+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T17:20:19.863+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T17:20:19.869+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T17:20:19.871+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 0.293 seconds (process running for 280.202)
+2025-09-18T17:20:19.871+09:00  INFO 17900 --- [ch04] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-18T17:20:55.779+09:00  INFO 17900 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 6 class path changes (0 additions, 0 deletions, 6 modifications)
+2025-09-18T17:20:55.780+09:00  INFO 17900 --- [ch04] [Thread-35] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T17:20:55.782+09:00  INFO 17900 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T17:20:55.844+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Starting Ch04Application using Java 21.0.8 with PID 17900 (C:\Users\GGG\Desktop\workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\workspace\Spring\ch04)
+2025-09-18T17:20:55.844+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T17:20:56.023+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-18T17:20:56.024+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T17:20:56.024+09:00  INFO 17900 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T17:20:56.035+09:00  INFO 17900 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2025-09-18T17:20:56.035+09:00  INFO 17900 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 189 ms
+2025-09-18T17:20:56.072+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-18T17:20:56.114+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-18T17:20:56.121+09:00  INFO 17900 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2025-09-18T17:20:56.124+09:00  INFO 17900 --- [ch04] [restartedMain] kr.co.ch04.Ch04Application               : Started Ch04Application in 0.307 seconds (process running for 316.455)
+2025-09-18T17:20:56.125+09:00  INFO 17900 --- [ch04] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-18T17:21:01.081+09:00  INFO 17900 --- [ch04] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T17:21:01.084+09:00  INFO 17900 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
