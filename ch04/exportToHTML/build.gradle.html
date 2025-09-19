@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>build.gradle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+.s3 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+build.gradle</font>
+</center></td></tr></table>
+<pre><span class="s0">plugins </span><span class="s1">{</span>
+    <span class="s0">id </span><span class="s2">'java'</span>
+    <span class="s0">id </span><span class="s2">'org.springframework.boot' </span><span class="s0">version </span><span class="s2">'3.5.5'</span>
+    <span class="s0">id </span><span class="s2">'io.spring.dependency-management' </span><span class="s0">version </span><span class="s2">'1.1.7'</span>
+<span class="s1">}</span>
+
+<span class="s0">group </span><span class="s1">= </span><span class="s2">'kr.co.ch04'</span>
+<span class="s0">version </span><span class="s1">= </span><span class="s2">'0.0.1-SNAPSHOT'</span>
+<span class="s0">description </span><span class="s1">= </span><span class="s2">'ch04'</span>
+
+<span class="s0">java </span><span class="s1">{</span>
+    <span class="s0">toolchain </span><span class="s1">{</span>
+        <span class="s0">languageVersion </span><span class="s1">= </span><span class="s0">JavaLanguageVersion.of</span><span class="s1">(</span><span class="s3">17</span><span class="s1">)</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s0">configurations </span><span class="s1">{</span>
+    <span class="s0">compileOnly </span><span class="s1">{</span>
+        <span class="s0">extendsFrom annotationProcessor</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s0">repositories </span><span class="s1">{</span>
+    <span class="s0">mavenCentral</span><span class="s1">()</span>
+<span class="s1">}</span>
+
+<span class="s0">dependencies </span><span class="s1">{</span>
+    <span class="s0">implementation </span><span class="s2">'org.springframework.boot:spring-boot-starter-thymeleaf'</span>
+    <span class="s0">implementation </span><span class="s2">'org.springframework.boot:spring-boot-starter-web'</span>
+    <span class="s0">implementation </span><span class="s2">'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.5'</span>
+    <span class="s0">implementation </span><span class="s2">'org.springframework.boot:spring-boot-starter-data-jdbc'</span>
+    <span class="s0">compileOnly </span><span class="s2">'org.projectlombok:lombok'</span>
+    <span class="s0">developmentOnly </span><span class="s2">'org.springframework.boot:spring-boot-devtools'</span>
+    <span class="s0">runtimeOnly </span><span class="s2">'com.mysql:mysql-connector-j'</span>
+    <span class="s0">runtimeOnly </span><span class="s2">'com.oracle.database.jdbc:ojdbc11'</span>
+    <span class="s0">annotationProcessor </span><span class="s2">'org.springframework.boot:spring-boot-configuration-processor'</span>
+    <span class="s0">annotationProcessor </span><span class="s2">'org.projectlombok:lombok'</span>
+    <span class="s0">testImplementation </span><span class="s2">'org.springframework.boot:spring-boot-starter-test'</span>
+    <span class="s0">testImplementation </span><span class="s2">'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.5'</span>
+    <span class="s0">testRuntimeOnly </span><span class="s2">'org.junit.platform:junit-platform-launcher'</span>
+<span class="s1">}</span>
+
+<span class="s0">tasks.named</span><span class="s1">(</span><span class="s2">'test'</span><span class="s1">) {</span>
+    <span class="s0">useJUnitPlatform</span><span class="s1">()</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
