@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="kr.co.ch04.mapper.User1Mapper">
 
+<mapper namespace="kr.co.ch04.mapper.User1Mapper">
     <insert id="insert">
         INSERT INTO USER1 VALUES (#{uid}, #{name}, #{birth}, #{age});
     </insert>
@@ -24,7 +24,6 @@
         WHERE
         uid=#{uid};
     </update>
-
     <delete id="delete">
         DELETE FROM USER1 WHERE uid=#{uid};
     </delete>
