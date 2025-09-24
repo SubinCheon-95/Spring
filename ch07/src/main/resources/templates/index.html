@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8">
+    <title>ch07.Spring Security</title>
+    <!--
+        날짜 : 2025/09/23
+        이름 : 김철학
+        내용 : 7장 Spring Security 실습
+    -->
+</head>
+<body>
+    <h3>ch07.Spring Security</h3>
+
+    <h4>인증 실습</h4>
+
+    <th:block th:if="${user}">
+        <p>[[${user.name}]]님 반갑습니다.</p>
+        <a th:href="@{/user/info}">사용자 정보</a>
+        <a th:href="@{/user/logout}">로그아웃</a>
+    </th:block>
+    <th:block th:unless="${user}">
+        <a th:href="@{/user/login}">로그인</a>
+        <a th:href="@{/user/register}">회원가입</a>
+    </th:block>
+
+    <h4>인가 실습</h4>
+    <th:block sec:authorize="hasRole('ADMIN')">
+        <a th:href="@{/admin/}">admin</a><br>
+    </th:block>
+
+    <th:block sec:authorize="hasAnyRole('ADMIN', 'MANAGER')">
+        <a th:href="@{/manager/}">manager</a><br>
+    </th:block>
+
+    <th:block sec:authorize="hasAnyRole('ADMIN', 'MANAGER', 'MEMBER')">
+        <a th:href="@{/member/}">member</a><br>
+    </th:block>
+
+    <a th:href="@{/guest/}">guest</a><br>
+
+</body>
+</html>
