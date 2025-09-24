@@ -1,0 +1,248 @@
+/* 공통 적용 사항 */
+:root {
+    --blue: #336AFD;
+    --deep-gray: #2f2f2f;
+    --gray-900: #1f2937;
+    --gray-800: #374151;
+    --gray-700: #4b5563;
+    --gray-600: #6b7280;
+    --gray-500: #9F9F9F;
+    --gray-100: #f3f4f6;
+    --gray-50: #f9fafb;
+    --border: #e5e7eb;
+    --danger: #ff4d4f;
+}
+
+/* /////////////////// 상품 경로 /////////////////// */
+.view-wrap {
+    display: grid;
+    grid-template-columns: 220px 1fr; /* 왼쪽 베스트상품 220px + 오른쪽 나머지 */
+    gap: 40px;
+}
+
+.nav-path {
+    font-size: 14px;
+    color: var(--gray-600);
+    margin: 20px auto;
+    text-align: left;
+}
+
+.nav-path ol {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.nav-path li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-path li+li::before {
+    content: ">";
+    margin: 0 6px;
+    color: var(--gray-500);
+}
+
+.nav-path a {
+    color: var(--gray-700);
+    font-weight: 500;
+}
+
+.nav-path a:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+/* /////////////////// 상품 경로 /////////////////// */
+
+/* //////////////// 베스트 상품 시작 //////////////// */
+
+/* 베스트상품 패널 */
+.best-panel {
+    flex: 0 0 220px;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+}
+
+.best-title,
+.section-title {
+    font-family: Pretendard, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #336AFD; /* ExtraBold 22px */
+    margin-bottom: 20px;
+}
+
+/* 상품 카드 */
+.best-card {
+    position: relative;
+    display: block;
+    width: 220px;
+    height:270px;
+    margin-top: 6px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0,0,0,.06);
+}
+
+.best-thumb {
+    width: 200px;
+    height: 170px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* 베스트 상품 이미지 규격 */
+.best-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.best-info {
+    padding: 10px 12px;
+    margin-bottom: 15px;
+}
+
+/* 폰트 스타일 */
+.best-name {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.15;
+    height: 34px;
+    overflow: hidden;
+    margin: 6px 0 8px;
+}
+
+.best-prices {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.best-discount {
+    font-size: 14px;
+    font-weight: 400;
+    color: #5B5A5A;
+}
+
+.best-regular {
+    font-size: 14px;
+    font-weight: 300;
+    color: #5B5A5A;
+    text-decoration: line-through;
+}
+
+.best-sale {
+    font-size: 15px;
+    font-weight: 500;
+    color: #E20000;
+}
+
+/* 넘버 버튼 */
+.best-num-list {
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.best-num-list li+li {
+    margin-top: 8px;
+}
+
+.best-num-list button {
+    width: 220px;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    background: rgba(51,106,253,.12);
+    color: #336AFD;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.best-num-list button:hover {
+    background: rgba(51,106,253,.18);
+}
+
+.best-num-list button.active  {
+    background: #336AFD;
+    color: #fff;
+    border-color: #336AFD;
+}
+
+/* //////////////////// 베스트 상품 끝 //////////////////// */
+
+/* /////////////////// 상품 상세 페이지 /////////////////// */
+
+/* 상품 info */
+
+.prod-media {
+    text-align: center;
+}
+.main-img img {
+    max-width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+.thumb-list {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+.thumb-list img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+}
+
+/* 오른쪽 정보 */
+.prod-info .prod-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.prod-info .prod-price {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.prod-price .discount {
+    color: red;
+    font-weight: 700;
+}
+.prod-price .sale {
+    color: var(--blue);
+    font-size: 22px;
+    font-weight: 800;
+}
+.prod-price .regular {
+    color: #888;
+    text-decoration: line-through;
+}
+
+.prod-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+.prod-actions .btn {
+    flex: 1;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.prod-actions .wish { background: #eee; }
+.prod-actions .cart { background: #f3f4f6; }
+.prod-actions .buy { background: var(--blue); color: #fff; }

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cupang::상품상세</title>
+    <link rel="stylesheet" th:href="@{/css/style_index.css}">
+    <link rel="stylesheet" th:href="@{/css/style_prodView.css}">
+
+    <!-- 검색 기능 -->
+    <script th:src="@{/js/search.js}" defer></script>
+    <!-- 1/2차 카테고리 기능 -->
+    <script th:src="@{/js/category.js}" defer></script>
+    <!-- 베스트+히트 상품 기능 -->
+    <script th:src="@{/js/best.js}" defer></script>
+    <!-- Top 버튼 기능 -->
+    <script th:src="@{/js/top-btn.js}" defer></script>
+    <!-- 로그인/로그아웃/관리자 메뉴 기능 -->
+    <script th:src="@{/js/user-menu.js}" defer></script>
+</head>
+<body>
+    <div class="page">
+
+        <div th:replace="_header :: headerFragment"></div>
+
+        <div class="view-wrap container">
+
+            <!-- 상품 경로 -->
+            <nav class="nav-path">
+                <ol>
+                    <li><a th:href="@{/index.html}">HOME</a></li>
+                    <li><a href="#">식품</a></li>
+                    <li><a href="#">식품 선물세트</a></li>
+                </ol>
+            </nav>
+
+            <div class="view-wrap container">
+
+                <!-- 베스트상품 -->
+                <aside class="best-panel">
+                    <h3 class="section-title">베스트상품</h3>
+                    <ol class="best-num-list" id="best-num-list">
+                        <li><button data-idx="0">NO.1</button></li>
+                        <li><button data-idx="1">NO.2</button></li>
+                        <li><button data-idx="2">NO.3</button></li>
+                        <li><button data-idx="3">NO.4</button></li>
+                        <li><button data-idx="4">NO.5</button></li>
+                    </ol>
+                </aside>
+
+                <!-- 가운데: 대표 이미지 + 썸네일 -->
+                <div class="prod-media">
+                    <div class="main-img">
+                        <img th:src="@{/images/Hit-product_1.png}" alt="상품 대표 이미지">
+                    </div>
+                    <div class="thumb-list">
+                        <img th:src="@{/images/Hit-product_S1.jpg}" alt="썸네일1">
+                        <img th:src="@{/images/Hit-product_S2.jpg}" alt="썸네일2">
+                        <img th:src="@{/images/Hit-product_S3.jpg}" alt="썸네일3">
+                    </div>
+                </div>
+
+                <!-- 오른쪽: 상품 정보 -->
+                <div class="prod-info">
+                    <p class="prod-brand">동원</p>
+                    <p class="prod-num">상품번호: 202509230001</p>
+                    <h2 class="prod-title">동원 튜나리챔 O-48호 + 부직포백 선물세트, 1세트</h2>
+                    <p class="prod-rating">★★★★★ <span>(1,653건 상품평)</span></p>
+
+                    <div class="prod-price">
+                        <span class="discount">49%</span>
+                        <strong class="sale">35,590원</strong>
+                        <del class="regular">69,900원</del>
+                    </div>
+
+                    <div class="prod-extra">
+                        <p>카드 추가 혜택: 31,480원~</p>
+                        <p>무이자 할부: 카드사별 무이자 혜택</p>
+                        <p>할인 쿠폰: 구매용 15% 할인쿠폰</p>
+                    </div>
+
+                    <div class="prod-delivery">
+                        <p>배송정보: <strong>택배배송</strong></p>
+                        <p>도착 예정: 모레(금) 10/24 도착 예정</p>
+                        <p>배송비: 무료배송<br>
+                                  제주 4,000원, 도서산간 4,000원 추가</p>
+                    </div>
+
+                    <div class="prod-option">
+                        <label for="opt">옵션 선택</label>
+                        <select id="opt">
+                            <option>옵션 선택</option>
+                            <option>1세트</option>
+                            <option>2세트</option>
+                        </select>
+                    </div>
+
+                    <div class="prod-qty">
+                        <button class="qty-btn">-</button>
+                        <input type="number" value="1" min="1">
+                        <button class="qty-btn">+</button>
+                    </div>
+
+                    <div class="prod-total">
+                        합계: <strong>35,590원</strong>
+                    </div>
+
+                    <div class="prod-actions">
+                        <button class="btn-wish">찜하기</button>
+                        <button class="btn-cart">장바구니</button>
+                        <button class="btn-buy">바로구매</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOP 버튼 -->
+        <button id="topBtn" class="top-btn" aria-label="맨 위로 이동">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="lucide lucide-chevrons-up-icon lucide-chevrons-up">
+                <path d="m17 11-5-5-5 5"/>
+                <path d="m17 18-5-5-5 5"/>
+            </svg>
+        </button>
+
+        <div th:replace="_footer :: footerFragment"></div>
+
+    </div>
+</body>
+</html>
