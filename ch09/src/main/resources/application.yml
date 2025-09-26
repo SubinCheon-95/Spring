@@ -32,5 +32,5 @@ spring:
 
 jwt:
     issuer: sub6550@gmail.com
-    secret: E912C15AA2495217ECD6BE5BEA8D1
+    secret: E912C15AA2495217ECD6BE5BEA8D1102
 
