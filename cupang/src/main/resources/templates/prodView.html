@@ -5,6 +5,8 @@
     <title>Cupang::상품상세</title>
     <link rel="stylesheet" th:href="@{/css/style_index.css}">
     <link rel="stylesheet" th:href="@{/css/style_prodView.css}">
+    <link rel="stylesheet" th:href="@{/css/style_header.css}">
+    <link rel="stylesheet" th:href="@{/css/style_footer.css}">
     <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css}">
 
     <!-- 검색 기능 -->
@@ -19,6 +21,8 @@
     <script th:src="@{/js/user-menu.js}" defer></script>
     <!-- 옵션 선택 기능 -->
     <script th:src="@{/js/option.js}" defer></script>
+    <!-- 찜하기/장바구니/바로구매 기능 -->
+    <script th:src="@{/js/prod-actions.js}" defer></script>
 </head>
 <body>
     <main class="page">
@@ -107,23 +111,43 @@
                         <select id="opt">
                             <option value="" disabled selected>선택하세요.</option>
                             <option value="1" data-price="35590">1세트</option>
-                            <option value="2" data-price="71180">2세트</option>
-                            <option value="3" data-price="106770">3세트</option>
-                            <option value="4" data-price="142360">4세트</option>
-                            <option value="5" data-price="177950">5세트</option>
                         </select>
                     </div>
 
                     <!-- 선택된 옵션 리스트 -->
-                    <div class="prod-selected" id="selected-list"></div>
+                    <div class="prod-selected" id="selected-list">
+                        <div class="prod-selected-item">
+                            <!-- 상품명 -->
+                            <p class="item-name">1세트</p>
+
+                            <!-- 수량조절 + 가격 -->
+                            <div class="item-bottom">
+                                <div class="qty">
+                                    <button class="minus">-</button>
+                                    <input type="text" value="1">
+                                    <button class="plus">+</button>
+                                </div>
+                                <strong class="qty-price">35,590원</strong>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- 최종 합계 -->
                     <div class="prod-total">
-                        합계: <strong id="total-price">0원</strong>
+                        <div class="prod-total-price">
+                            합계 <strong id="total-price">0원</strong>
+                        </div>
                     </div>
 
                     <div class="prod-actions">
-                        <button class="btn wish">찜하기</button>
+                        <button class="btn wish" aria-label="찜하기">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                     class="lucide lucide-heart-icon lucide-heart">
+                                    <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/>
+                                </svg>
+                        </button>
                         <button class="btn cart">장바구니</button>
                         <button class="btn buy">바로구매</button>
                     </div>

@@ -19,14 +19,18 @@ selectOpt.addEventListener("change", () => {
     renderSelections();
 });
 
+const prodTotal = document.querySelector(".prod-total");
+
 function renderSelections() {
     selectedList.innerHTML = "";
     let total = 0;
 
     if (selections.length === 0) {
-        selectedList.style.display = "none"; // 아무것도 없으면 숨김
+        selectedList.style.display = "none";
+        prodTotal.style.display = "none";     // 합계 숨김
     } else {
-        selectedList.style.display = "block"; // 옵션 있으면 보이게
+        selectedList.style.display = "block";
+        prodTotal.style.display = "block";    // 합계 표시
     }
 
     selections.forEach((item, idx) => {
@@ -35,20 +39,21 @@ function renderSelections() {
         const div = document.createElement("div");
         div.className = "prod-selected-item";
         div.innerHTML = `
-      <span>${item.text}</span>
-      <div class="qty">
-        <button onclick="changeQty(${idx}, -1)">-</button>
-        <input type="text" value="${item.qty}" readonly>
-        <button onclick="changeQty(${idx}, 1)">+</button>
-      </div>
-      <strong>${(item.price * item.qty).toLocaleString()}원</strong>
-    `;
+          <p class="item-name">${item.text}</p>
+          <div class="item-bottom">
+            <div class="qty">
+              <button onclick="changeQty(${idx}, -1)">-</button>
+              <input type="text" value="${item.qty}" readonly>
+              <button onclick="changeQty(${idx}, 1)">+</button>
+            </div>
+            <strong class="qty-price">${(item.price * item.qty).toLocaleString()}원</strong>
+          </div>
+        `;
         selectedList.appendChild(div);
     });
 
     totalPrice.textContent = total.toLocaleString() + "원";
 }
-
 
 function changeQty(idx, delta) {
     selections[idx].qty += delta;
