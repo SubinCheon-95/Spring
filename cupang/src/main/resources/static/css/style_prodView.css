@@ -518,3 +518,34 @@
     background: var(--blue);
     color: #ffffff;
 }
+
+/* //////////////////// TOP 버튼 시작 //////////////////// */
+.top-btn {
+    position: fixed;
+    bottom: 40px;
+
+    /* 화면 가운데 기준으로 1200px 컨테이너 + 버튼 간격 계산 */
+    left: calc(50% + 600px + 20px);
+    /* 50% = 화면 가운데 / 600px = 컨테이너 절반 / +20px = 간격 */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: opacity 0.3s ease;
+}
+
+.top-btn:hover {
+    background: #2454d1; /* hover 시 살짝 진한 블루 */
+}
+
+.top-btn.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+/* //////////////////// TOP 버튼 끝 //////////////////// */

@@ -61,17 +61,18 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0 auto;
 }
 
-main.main,
 .container {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
 
-
 /* 헤더 영역 컨테이너 영역 */
 .header {
     position: relative;
+    max-width: 1920px;
+    min-width: 1200px;
+    width: 100%;   /* 컨테이너 폭 */
     border-bottom: 1px solid var(--border);
     background: #fff;
 }
@@ -103,20 +104,24 @@ main.main,
 /* 서브 링크(로그인/회원가입/고객센터) */
 .utility-nav {
     border-bottom: 1px solid var(--border);
+    max-width: 1920px;
+    min-width: 1200px;
+    width: 100%;   /* 컨테이너 폭 */
+    margin: 0 auto;      /* 가운데 정렬 */
     background-color: #F3FBFF;
-    width: 100%;
 }
 
 .utility-nav .inner {
-    max-width: 1200px;   /* 컨테이너 폭 */
-    margin: 0 auto;      /* 가운데 정렬 */
+    width: 1200px;
     display: flex;
-    justify-content: flex-end;  /* 오른쪽 정렬 */
+    justify-content: flex-end;
     padding: 7px 0;
 }
 
 .utility-list {
+    width: 1200px;   /* 컨테이너 폭 */
     display: flex;
+    justify-content: flex-end;  /* 오른쪽 정렬 */
     gap: 16px;
     font-size: 13px;
     font-weight: bold;
@@ -137,6 +142,7 @@ main.main,
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 1200px;
     gap: 16px;
     padding: 25px 0 5px 0;
 }
@@ -243,6 +249,7 @@ main.main,
 }
 
 /* GNB 전체 영역 */
+
 .main-nav {
     display: flex;
     align-items: center;

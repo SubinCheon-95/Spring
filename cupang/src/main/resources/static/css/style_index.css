@@ -55,8 +55,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* //////////////////// 슬라이드 배너 //////////////////// */
 .main-banner {
-    width: 100%;
     max-width: 1920px;
+    min-width: 1200px;
+    width: 100%;   /* 컨테이너 폭 */
     margin-bottom: 60px;
 }
 

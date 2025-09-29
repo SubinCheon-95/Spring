@@ -60,7 +60,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .footer-bar {
-    width: 100%;
+    max-width: 1920px;
+    min-width: 1200px;
+    width: 100%;   /* 컨테이너 폭 */
     border-top: 2px solid var(--border);
     border-bottom: 1px solid var(--border);
 }
