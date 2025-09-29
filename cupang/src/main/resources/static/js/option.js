@@ -1,3 +1,4 @@
+/* 상품 상세 페이지 옵션 기능 */
 const selectOpt = document.getElementById("opt");
 const selectedList = document.getElementById("selected-list");
 const totalPrice = document.getElementById("total-price");

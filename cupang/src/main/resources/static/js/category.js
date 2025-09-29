@@ -1,4 +1,5 @@
-// Category data
+/* 전체 카테고리 구현 기능 */
+// 카테고리 데이터
 const CATEGORY_DATA = {
     '패션의류/잡화': ['여성패션','남성패션','남녀 공용 의류','속옷/잠옷','신발','가방/잡화','유아동패션','럭셔리패션'],
     '뷰티': ['럭셔리뷰티','스킨케어','클렌징/필링','선케어/태닝','메이크업','향수','남성화장품','네일','어린이화장품','헤어','바디','선물세트/키트'],
@@ -36,7 +37,18 @@ document.addEventListener("DOMContentLoaded", () => {
         lv2.innerHTML = "";
         (CATEGORY_DATA[key] || []).forEach(label => {
             const a = document.createElement("a");
-            a.href = `category.html?lv1=${encodeURIComponent(key)}&lv2=${encodeURIComponent(label)}`;
+            /* 찐코드 */
+            /* a.href = `prodList.html?lv1=${encodeURIComponent(key)}&lv2=${encodeURIComponent(label)}`; */
+
+            /* 더미 데이터 */
+            if (key === "식품" && label === "식품 선물세트") {
+                // 임시: 식품 > 식품 선물세트만 연결
+                a.href = "/cupang/prodList";
+            } else {
+                // 다른 카테고리는 아직 연결 안 함
+                a.href = "#";
+            }
+
             a.textContent = label;
             lv2.appendChild(a);
         });

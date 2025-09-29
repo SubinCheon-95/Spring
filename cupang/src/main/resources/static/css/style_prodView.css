@@ -519,6 +519,151 @@
     color: #ffffff;
 }
 
+/* 상품 상세 구역 */
+.prod-extra.container {
+    width: 100%;
+    min-width: 1200px;
+    margin-top: 60px;
+}
+
+/* 3단 탭 메뉴 */
+.tab-menu {
+    display: flex;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 50px;
+}
+
+.tab-menu button {
+    flex: 1;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    background: #f9f9f9;
+    cursor: pointer;
+}
+
+.tab-menu button.active {
+    background: #ffffff;
+    border-bottom: 3px solid var(--blue);
+    color: var(--blue);
+}
+
+/* 상품정보 제공고시 테이블 */
+.spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.spec-table th, .spec-table td {
+    width: 25%;
+    color: #000000;
+    border: 1px solid var(--border);
+    padding: 12px 15px;
+    font-size: 14px;
+}
+
+.spec-table th, .spec-table td:last-child {
+    border-left: none;
+    border-right: none;
+}
+
+.spec-table th {
+    width: 15%;
+    background: #f9f9f9;
+    text-align: left;
+}
+
+/* 상세 이미지 */
+.prod-detail-img img {
+    width: 100%;
+    margin: 30px 0;
+}
+
+/* 상품평 */
+.prod-review {
+    margin-top: 40px;
+}
+.prod-review h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.review-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.review-list li {
+    border-bottom: 1px solid var(--border);
+    padding: 15px 0;
+}
+.review-top {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--gray-600);
+    margin-bottom: 5px;
+}
+.review-content {
+    font-size: 15px;
+    color: #222;
+}
+
+/* ////////////////// 페이지네이션 시작 ////////////////// */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 5px;
+}
+
+.page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    background: #ffffff;
+    transition: 0.2s;
+}
+
+.page-link:hover {
+    border: 1px solid var(--blue);
+}
+
+.page-link.active {
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #d0d0d0;
+    font-weight: 600;
+}
+
+.page-link.prev {
+    border: 1px solid #D4D4D4;
+    color: #D4D4D4;
+    margin-right: 15px;
+}
+
+.page-link.next {
+    border: 1px solid #D4D4D4;
+    color: #D4D4D4;
+    margin-left: 15px;
+}
+
+.page-link.GTEnd {
+    border: 1px solid #D4D4D4;
+    color: #D4D4D4;
+}
+/* /////////////////// 페이지네이션 끝 //////////////////// */
+
 /* //////////////////// TOP 버튼 시작 //////////////////// */
 .top-btn {
     position: fixed;

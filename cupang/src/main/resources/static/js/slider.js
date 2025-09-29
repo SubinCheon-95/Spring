@@ -1,3 +1,4 @@
+/* bxSlider 슬라이드 배너 기능 */
 document.addEventListener("DOMContentLoaded", () => {
     $('.bxslider').bxSlider({
         mode: 'horizontal',

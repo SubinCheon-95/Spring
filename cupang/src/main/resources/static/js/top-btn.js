@@ -1,4 +1,4 @@
-// TOP 버튼 동작
+/* TOP 버튼(맨 위로) 기능 */
 const topBtn = document.getElementById("topBtn");
 
 window.addEventListener("scroll", () => {

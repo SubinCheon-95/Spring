@@ -1,3 +1,4 @@
+/* 검색 기능 */
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".search-bar");
     const input = document.getElementById("search-input"); // id 수정 확인

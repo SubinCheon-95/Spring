@@ -1,3 +1,4 @@
+/* 찜/장바구니/바로구매 버튼 기능 */
 const btnWish = document.querySelector(".btn.wish");
 const btnCart = document.querySelector(".btn.cart");
 const btnBuy  = document.querySelector(".btn.buy");

@@ -1,3 +1,4 @@
+/* 베스트상품 온앤오프 & 스크롤 기능 */
 async function fetchBestProducts() {
     try {
         const res = await fetch('/api/best-products');
