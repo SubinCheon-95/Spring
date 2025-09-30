@@ -19,6 +19,8 @@
     <script th:src="@{/js/best.js}" defer></script>
     <!-- 상품 상세 페이지 옵션 기능-->
     <script th:src="@{/js/option.js}" defer></script>
+    <!-- 토스트 메세지 기능 -->
+    <script th:src="@{/js/toast.js}" defer></script>
     <!-- 찜/장바구니/바로구매 버튼 기능 -->
     <script th:src="@{/js/prod-actions.js}" defer></script>
     <!-- TOP 버튼(맨 위로) 기능 -->
@@ -96,9 +98,18 @@
                     </div>
 
                     <div class="prod-detail">
-                        <dt>카드 추가 혜택</dt><dd>31,480원~</dd>
+                        <dt>카드 추가 혜택</dt><dd class="dd-bold">31,480원~</dd>
                         <dt>무이자 할부</dt><dd>카드사별 무이자 혜택</dd>
-                        <dt>할인 쿠폰</dt><dd><a href=#>쿠폰 받기</a></dd>
+
+                        <dt>할인 쿠폰</dt>
+                        <dd>
+                            <a href="javascript:void(0);" onclick="showToast('쿠폰 받기 완료!')">
+                                <img th:src="@{/images/cupang_coupon.png}" alt="할인 쿠폰" class="coupon-img">
+                            </a>
+                        </dd>
+
+                        <!-- 토스트 메시지 컨테이너 -->
+                        <div id="toast"></div>
                     </div>
 
                     <div class="prod-detail">
@@ -108,10 +119,17 @@
 
                     <div class="prod-option">
                         <label for="opt">옵션 선택</label>
-                        <select id="opt">
-                            <option value="" disabled selected>선택하세요.</option>
-                            <option value="1" data-price="35590">1세트</option>
-                        </select>
+                        <div class="select-wrap">
+                            <select id="opt">
+                                <option value="" disabled selected>선택하세요.</option>
+                                <option value="1" data-price="35590">1세트</option>
+                            </select>
+                            <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6"/>
+                            </svg>
+                        </div>
                     </div>
 
                     <!-- 선택된 옵션 리스트 -->
@@ -202,30 +220,105 @@
             </div>
 
             <!-- 상품상세 이미지 -->
-            <div class="prod-detail-img">
-                <img th:src="@{/images/detail-sample.jpg}" alt="상품 상세 이미지">
+            <div class="prod-detail-img container">
+                <img th:src="@{/images/Hit-product_1-1.jpg}" alt="상품 상세 이미지">
             </div>
 
             <!-- 상품평 -->
             <div class="prod-review">
-                <h3>상품평 <span>(1,653)</span></h3>
+                <h3>상품평</h3>
+                <p class="sub-text">동일한 상품에 대해 작성된 상품평으로, 판매자는 다를 수 있습니다.</p>
+                <div class="big-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span>1,653</span>
+                </div>
 
                 <ul class="review-list">
                     <li>
                         <div class="review-top">
-                            <span class="stars">★★★★★</span>
-                            <span class="writer">abc***</span>
-                            <span class="date">2025-09-27</span>
+                            <div class="small-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="review-writer">sjan***</span>
                         </div>
-                        <p class="review-content">좋은 상품이에요! 선물하기 딱 좋아요.</p>
+                        <p class="review-prod">동원 튜나리챔 O-48호 + 부직포백 선물세트, 1세트</p>
+                        <p class="review-content">좋아요~ Good!!</p>
+                        <span class="date">2025-09-22</span>
                     </li>
+
                     <li>
                         <div class="review-top">
-                            <span class="stars">★★★★☆</span>
-                            <span class="writer">xyz***</span>
-                            <span class="date">2025-09-25</span>
+                            <div class="small-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <span class="review-writer">wlqd***</span>
                         </div>
-                        <p class="review-content">배송도 빠르고 만족합니다 :)</p>
+                        <p class="review-prod">동원 튜나리챔 O-48호 + 부직포백 선물세트, 1세트</p>
+                        <p class="review-content">배송이 너무 늦었어요. 흥!</p>
+                        <span class="date">2025-09-19</span>
+                    </li>
+
+                    <li>
+                        <div class="review-top">
+                            <div class="small-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="review-writer">whff***</span>
+                        </div>
+                        <p class="review-prod">동원 튜나리챔 O-48호 + 부직포백 선물세트, 1세트</p>
+                        <p class="review-content">역시 참치는 동원 참치!!</p>
+                        <div class="review-image">
+                            <img th:src="@{/images/Hit-product_img1.jpg}" alt="리뷰 이미지">
+                        </div>
+                        <span class="date">2025-09-12</span>
+                    </li>
+
+                    <li>
+                        <div class="review-top">
+                            <div class="small-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <span class="review-writer">wlst***</span>
+                        </div>
+                        <p class="review-prod">동원 튜나리챔 O-48호 + 부직포백 선물세트, 1세트</p>
+                        <p class="review-content">이렇게 많이 사는데 사은품 안주나용? 서운해서 별점 하나 뺍니다~~~</p>
+                        <span class="date">2025-09-01</span>
+                    </li>
+
+                    <li>
+                        <div class="review-top">
+                            <div class="small-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="review-writer">ckac***</span>
+                        </div>
+                        <p class="review-prod">동원 튜나리챔 O-48호 + 부직포백 선물세트, 1세트</p>
+                        <p class="review-content">참치 한캔이면 밥 한공기 뚝딱~ 맛있게 먹을게요!</p>
+                        <span class="date">2025-08-07</span>
                     </li>
                 </ul>
 

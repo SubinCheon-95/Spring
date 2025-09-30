@@ -107,19 +107,19 @@ h1, h2, h3, h4, h5, h6, p {
     max-width: 1920px;
     min-width: 1200px;
     width: 100%;   /* 컨테이너 폭 */
-    margin: 0 auto;      /* 가운데 정렬 */
+    margin: 0 auto; /* 가운데 정렬 */
     background-color: #F3FBFF;
 }
 
 .utility-nav .inner {
-    width: 1200px;
     display: flex;
     justify-content: flex-end;
+    width: 1200px;
+    margin: 0 auto;
     padding: 7px 0;
 }
 
 .utility-list {
-    width: 1200px;   /* 컨테이너 폭 */
     display: flex;
     justify-content: flex-end;  /* 오른쪽 정렬 */
     gap: 16px;
@@ -128,11 +128,11 @@ h1, h2, h3, h4, h5, h6, p {
     color: var(--gray-700);
 }
 
-.utility a {
+.utility-list a {
     color: var(--gray-600);
 }
 
-.utility a:hover {
+.utility-list a:hover {
     color: var(--blue);
     text-decoration: underline;
 }
