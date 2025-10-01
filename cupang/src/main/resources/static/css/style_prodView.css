@@ -417,20 +417,6 @@
     font-weight: 600;
 }
 
-/*.prod-option select {*/
-/*    grid-column: 2; !* 두 번째 열 *!*/
-/*    width: 220px;*/
-/*    height: 40px;*/
-/*    margin: 10px 0;*/
-/*    padding: 5px 10px;*/
-/*    color: #000000;*/
-/*    border: 1px solid var(--border);*/
-/*    font-size: 14px;*/
-/*    font-weight: 500;*/
-/*    cursor: pointer;*/
-/*    background: #fff;*/
-/*}*/
-
 .select-wrap {
     position: relative;
     display: inline-block;

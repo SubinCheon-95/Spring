@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cupang::주문/결제</title>
+    <link rel="stylesheet" th:href="@{/css/style_index.css}">
+    <link rel="stylesheet" th:href="@{/css/style_prodOrder.css}">
+    <link rel="stylesheet" th:href="@{/css/style_prodList.css}">
+    <link rel="stylesheet" th:href="@{/css/style_header.css}">
+    <link rel="stylesheet" th:href="@{/css/style_footer.css}">
+
+    <!-- 유저별 권한 기능 -->
+    <script th:src="@{/js/user-menu.js}" defer></script>
+    <!-- 검색 기능 -->
+    <script th:src="@{/js/search.js}" defer></script>
+    <!-- 전체 카테고리 구현 기능 -->
+    <script th:src="@{/js/category.js}" defer></script>
+    <!-- 베스트상품 온앤오프 & 스크롤 기능 -->
+    <script th:src="@{/js/best.js}" defer></script>
+    <!-- TOP 버튼(맨 위로) 기능 -->
+    <script th:src="@{/js/top-btn.js}" defer></script>
+</head>
+<body>
+    <main class="page">
+
+        <!-- 헤더 -->
+        <div th:replace="_header :: headerFragment"></div>
+
+        <!-- 주문/결제 레이아웃 -->
+        <div class="order-wrap">
+
+            <!-- 베스트상품 -->
+            <aside class="col-a">
+                <div class="best-panel">
+                    <h3 class="section-title">베스트상품</h3>
+                    <ol class="best-num-list" id="best-num-list">
+                        <li><button data-idx="0">NO.1</button></li>
+                        <li><button data-idx="1">NO.2</button></li>
+                        <li><button data-idx="2">NO.3</button></li>
+                        <li><button data-idx="3">NO.4</button></li>
+                        <li><button data-idx="4">NO.5</button></li>
+                    </ol>
+                </div>
+            </aside>
+
+            <!-- 우측: 주문/결제 -->
+            <section class="col-b">
+                <div class="list-header">
+                    <h2 class="list-title">주문하기</h2>
+
+                    <!-- 경로 네비게이션 -->
+                    <nav class="cart-steps">
+                        <ol>
+                            <li><a href="#">01 옵션선택</a></li>
+                            <li><a href="#">02 장바구니</a></li>
+                            <li class="active">03 주문/결제</li>
+                            <li><a href="#">04 주문완료</a></li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <!-- 주문 내역 -->
+                <div class="cart-grid">
+                    <!-- 좌측: 주문 상세 -->
+                    <div class="cart-list">
+
+                        <!-- ① 주문 상품 -->
+                        <div class="order-section">
+                            <h3>주문상품</h3>
+                            <div class="order-item">
+                                <img th:src="@{/images/Hit-product_1.png}" alt="상품">
+                                <div class="order-info">
+                                    <p class="order-name">동원 튜나리챔 선물세트</p>
+                                    <p class="order-sub">상품 설명 간단히</p>
+                                    <p class="order-price">판매가: 27,000원 | 할인 5% | 배송비 무료</p>
+                                </div>
+                                <p class="order-total">합계: <strong>25,650원</strong></p>
+                            </div>
+                        </div>
+
+                        <!-- ② 배송정보 -->
+                        <div class="order-section">
+                            <h3>배송정보</h3>
+                            <form>
+                                <label>수령자 <input type="text" placeholder="이름"></label>
+                                <label>휴대폰 <input type="text" placeholder="010-1234-5678"></label>
+                                <label>우편번호 <input type="text"><button type="button">검색</button></label>
+                                <label>기본주소 <input type="text"></label>
+                                <label>상세주소 <input type="text"></label>
+                                <label>기타 <input type="text"></label>
+                            </form>
+                        </div>
+
+                        <!-- ③ 할인정보 -->
+                        <div class="order-section">
+                            <h3>할인정보</h3>
+                            <p>현재 포인트: <strong>7,200점</strong></p>
+                            <p><input type="number" placeholder="사용할 포인트 입력"> <button>사용하기</button></p>
+                            <p>
+                                <select>
+                                    <option>쿠폰 선택</option>
+                                </select>
+                                <button>사용하기</button>
+                            </p>
+                        </div>
+
+                        <!-- ④ 결제방법 -->
+                        <div class="order-section">
+                            <h3>결제방법</h3>
+                            <label><input type="radio" name="pay" checked> 신용카드</label>
+                            <label><input type="radio" name="pay"> 체크카드</label>
+                            <label><input type="radio" name="pay"> 계좌이체</label>
+                            <label><input type="radio" name="pay"> 무통장입금</label>
+                            <label><input type="radio" name="pay"> 휴대폰결제</label>
+                            <label><input type="radio" name="pay"> 카카오페이</label>
+                        </div>
+                    </div>
+
+                    <!-- 우측: 최종결제정보 -->
+                    <aside class="cart-summary">
+                        <h3>최종 결제정보</h3>
+                        <ul>
+                            <li><span>상품수</span><span><strong>1</strong></span></li>
+                            <li><span>상품금액</span><span><strong>27,000</strong>원</span></li>
+                            <li><span>할인금액</span><span><strong>-1,350</strong>원</span></li>
+                            <li><span>배송비</span><span><strong>+0</strong>원</span></li>
+                            <li><span>적립 포인트</span><span><strong>270</strong>원</span></li>
+                        </ul>
+                        <p class="cart-total"><strong>24,650</strong>원</p>
+                        <button class="btn-order">결제하기</button>
+                    </aside>
+                </div>
+            </section>
+        </div>
+
+        <!-- 푸터 -->
+        <div th:replace="_footer :: footerFragment"></div>
+    </main>
+</body>
+</html>

@@ -37,7 +37,6 @@
 
 .nav-path li+li::before {
     content: ">";
-    margin: 0 5px;
     color: var(--gray-500);
 }
 
