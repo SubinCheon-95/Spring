@@ -283,11 +283,15 @@
     font-weight: 600;
 }
 
-.order-total {
-    font-weight: 700;
-    color: var(--blue);
-    min-width: 120px;
-    text-align: right;
+.order-section .order-del {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-section .order-del label {
+    display: block;
+    font-weight: 500;
 }
 
 /* 전체 합계 영역 */
