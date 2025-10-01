@@ -22,6 +22,11 @@
     <script th:src="@{/js/top-btn.js}" defer></script>
     <!-- 장바구니 구현 기능 -->
     <script th:src="@{/js/cart.js}" defer></script>
+    <!-- 카카오(구 다음) 우편번호 서비스 API -->
+    <script th:src="@{//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js}"></script>
+    <script th:src="@{/js/postcode.js}"></script>
+    <!-- 쿠폰/포인트 사용 기능 -->
+    <script th:src="@{/js/order.js}"></script>
 </head>
 <body>
     <main class="page">
@@ -68,59 +73,101 @@
                     <!-- 좌측: 주문 상세 -->
                     <div class="order-list">
 
-                        <!-- 주문 상품 -->
-                        <div class="order-section">
-                            <h3>주문상품</h3>
-                            <div class="order-item">
-                                <img th:src="@{/images/Hit-product_1.png}" alt="상품">
-                                <div class="order-info">
-                                    <p class="order-name">동원 튜나리챔 O-48호+부직포백 선물 세트</p>
-                                    <p class="order-sub">추석 선물 세트</p>
-                                    <div class="order-price">
+                        <!-- 배송지 정보 -->
+                        <div class="order-section delivery-box">
+                            <div class="section-header">
+                                <h3>배송지 정보</h3>
+                            </div>
+
+                            <div class="delivery-info">
+                                <div class="form-row">
+                                    <label for="receiver">받는 사람</label>
+                                    <input type="text" id="receiver" placeholder="이름 입력">
+                                </div>
+                                <div class="form-row">
+                                    <label for="phone">연락처</label>
+                                    <input type="text" id="phone" placeholder="연락처 입력">
+                                </div>
+                                <div class="form-row">
+                                    <label for="postcode">우편번호</label>
+                                    <input type="text" id="postcode" placeholder="우편번호" readonly>
+                                    <button type="button" onclick="execDaumPostcode()">검색</button>
+                                </div>
+                                <div class="form-row">
+                                    <label for="address">주소</label>
+                                    <input type="text" id="address" placeholder="기본 주소" readonly>
+                                </div>
+                                <div class="form-row">
+                                    <label for="detailAddress">상세주소</label>
+                                    <input type="text" id="detailAddress" placeholder="상세 주소">
+                                </div>
+                                <div class="form-row">
+                                    <label for="memo">배송 메모</label>
+                                    <select id="memo">
+                                        <option>배송 메모를 선택해주세요</option>
+                                        <option>부재 시 경비실에 맡겨주세요</option>
+                                        <option>문 앞에 놓아주세요</option>
+                                        <option>배송 전 연락 부탁드립니다</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 상품 정보 -->
+                        <div class="order-section product-box">
+                            <div class="section-header">
+                                <h3>상품 정보</h3>
+                            </div>
+                            <div class="product-info">
+                                <img th:src="@{/images/Hit-product_1.png}" alt="상품" class="product-thumb">
+                                <div class="product-detail">
+                                    <p class="product-name">동원 튜나리챔 O-48호+부직포백 선물 세트</p>
+                                    <p class="product-option">1세트</p>
+                                    <div class="product-price">
                                         <span class="discount">49%</span>
-                                        <strong class="sale">35,590원</strong>
+                                        <strong class="sale" id="basePrice">35,590</strong>원
                                         <del class="regular">69,900원</del>
                                         <span class="badge">무료배송</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- 배송정보 -->
-                        <div class="order-section">
-                            <h3>배송정보</h3>
-                            <form class="order-del">
-                                <label>수령인 <input type="text" placeholder=""></label>
-                                <label>휴대폰 <input type="text" placeholder=""></label>
-                                <label>우편번호 <input type="text"><button type="button">검색</button></label>
-                                <label>기본주소 <input type="text"></label>
-                                <label>상세주소 <input type="text"></label>
-                                <label>기타 <input type="text"></label>
-                            </form>
-                        </div>
+                            <!-- 쿠폰/포인트 -->
+                            <div class="coupon-point-box">
+                                <h4>쿠폰/포인트</h4>
 
-                        <!-- 할인정보 -->
-                        <div class="order-section">
-                            <h3>할인정보</h3>
-                            <p>현재 포인트: <strong>7,200점</strong></p>
-                            <p><input type="number" placeholder="사용할 포인트 입력"> <button>사용하기</button></p>
-                            <p>
-                                <select>
-                                    <option>쿠폰 선택</option>
-                                </select>
-                                <button>사용하기</button>
-                            </p>
+                                <!-- 쿠폰 영역 -->
+                                <div class="coupon-list">
+                                    <label>
+                                        <input type="checkbox" id="coupon-check" data-discount="0.15">
+                                        귀여운 소비 15% 할인 쿠폰
+                                        <span class="coupon-cond">(100원 이상 구매 시, ~11/30)</span>
+                                    </label>
+                                </div>
+
+                                <!-- 포인트 영역 -->
+                                <div class="point-box">
+                                    <p>현재 포인트: <strong id="currentPoint">7,200</strong>점</p>
+                                    <input type="number" id="usePoint" placeholder="사용할 포인트 입력">
+                                    <button type="button" onclick="applyPoint()">사용하기</button>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- 결제방법 -->
-                        <div class="order-section">
-                            <h3>결제방법</h3>
-                            <label><input type="radio" name="pay" checked> 신용카드</label>
-                            <label><input type="radio" name="pay"> 체크카드</label>
-                            <label><input type="radio" name="pay"> 계좌이체</label>
-                            <label><input type="radio" name="pay"> 무통장입금</label>
-                            <label><input type="radio" name="pay"> 휴대폰결제</label>
-                            <label><input type="radio" name="pay"> 카카오페이</label>
+                        <div class="order-section payment-box">
+                            <div class="section-header">
+                                <h3>결제방법</h3>
+                            </div>
+
+                            <div class="payment-methods">
+                                <button class="pay-btn active">신용카드</button>
+                                <button class="pay-btn">체크카드</button>
+                                <button class="pay-btn">계좌이체</button>
+                                <button class="pay-btn">무통장입금</button>
+                                <button class="pay-btn">휴대폰결제</button>
+                                <button class="pay-btn">카카오페이</button>
+                            </div>
                         </div>
                     </div>
 
