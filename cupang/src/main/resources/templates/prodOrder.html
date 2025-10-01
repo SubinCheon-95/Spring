@@ -5,6 +5,7 @@
     <title>Cupang::주문/결제</title>
     <link rel="stylesheet" th:href="@{/css/style_index.css}">
     <link rel="stylesheet" th:href="@{/css/style_prodOrder.css}">
+    <link rel="stylesheet" th:href="@{/css/style_prodCart.css}">
     <link rel="stylesheet" th:href="@{/css/style_prodList.css}">
     <link rel="stylesheet" th:href="@{/css/style_header.css}">
     <link rel="stylesheet" th:href="@{/css/style_footer.css}">
@@ -19,6 +20,8 @@
     <script th:src="@{/js/best.js}" defer></script>
     <!-- TOP 버튼(맨 위로) 기능 -->
     <script th:src="@{/js/top-btn.js}" defer></script>
+    <!-- 장바구니 구현 기능 -->
+    <script th:src="@{/js/cart.js}" defer></script>
 </head>
 <body>
     <main class="page">
@@ -45,6 +48,7 @@
 
             <!-- 우측: 주문/결제 -->
             <section class="col-b">
+
                 <div class="list-header">
                     <h2 class="list-title">주문하기</h2>
 
@@ -60,25 +64,29 @@
                 </div>
 
                 <!-- 주문 내역 -->
-                <div class="cart-grid">
+                <div class="order-grid">
                     <!-- 좌측: 주문 상세 -->
-                    <div class="cart-list">
+                    <div class="order-list">
 
-                        <!-- ① 주문 상품 -->
+                        <!-- 주문 상품 -->
                         <div class="order-section">
                             <h3>주문상품</h3>
                             <div class="order-item">
                                 <img th:src="@{/images/Hit-product_1.png}" alt="상품">
                                 <div class="order-info">
-                                    <p class="order-name">동원 튜나리챔 선물세트</p>
-                                    <p class="order-sub">상품 설명 간단히</p>
-                                    <p class="order-price">판매가: 27,000원 | 할인 5% | 배송비 무료</p>
+                                    <p class="order-name">동원 튜나리챔 O-48호+부직포백 선물 세트</p>
+                                    <p class="order-sub">추석 선물 세트</p>
+                                    <div class="order-price">
+                                        <span class="discount">49%</span>
+                                        <strong class="sale">35,590원</strong>
+                                        <del class="regular">69,900원</del>
+                                        <span class="badge">무료배송</span>
+                                    </div>
                                 </div>
-                                <p class="order-total">합계: <strong>25,650원</strong></p>
                             </div>
                         </div>
 
-                        <!-- ② 배송정보 -->
+                        <!-- 배송정보 -->
                         <div class="order-section">
                             <h3>배송정보</h3>
                             <form>
@@ -91,7 +99,7 @@
                             </form>
                         </div>
 
-                        <!-- ③ 할인정보 -->
+                        <!-- 할인정보 -->
                         <div class="order-section">
                             <h3>할인정보</h3>
                             <p>현재 포인트: <strong>7,200점</strong></p>
@@ -104,7 +112,7 @@
                             </p>
                         </div>
 
-                        <!-- ④ 결제방법 -->
+                        <!-- 결제방법 -->
                         <div class="order-section">
                             <h3>결제방법</h3>
                             <label><input type="radio" name="pay" checked> 신용카드</label>
@@ -117,7 +125,7 @@
                     </div>
 
                     <!-- 우측: 최종결제정보 -->
-                    <aside class="cart-summary">
+                    <aside class="order-summary">
                         <h3>최종 결제정보</h3>
                         <ul>
                             <li><span>상품수</span><span><strong>1</strong></span></li>
@@ -126,12 +134,22 @@
                             <li><span>배송비</span><span><strong>+0</strong>원</span></li>
                             <li><span>적립 포인트</span><span><strong>270</strong>원</span></li>
                         </ul>
-                        <p class="cart-total"><strong>24,650</strong>원</p>
+                        <p class="order-total"><strong>24,650</strong>원</p>
                         <button class="btn-order">결제하기</button>
                     </aside>
                 </div>
             </section>
         </div>
+
+        <!-- TOP 버튼 -->
+        <button id="topBtn" class="top-btn" aria-label="맨 위로 이동">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="lucide lucide-chevrons-up-icon lucide-chevrons-up">
+                <path d="m17 11-5-5-5 5"/>
+                <path d="m17 18-5-5-5 5"/>
+            </svg>
+        </button>
 
         <!-- 푸터 -->
         <div th:replace="_footer :: footerFragment"></div>

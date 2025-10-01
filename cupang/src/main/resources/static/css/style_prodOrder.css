@@ -15,9 +15,12 @@
 }
 
 .order-wrap {
+    display: flex;
+    align-items: flex-start;
     max-width: 1200px;
     width: 100%;
-    margin: 15px auto 0 auto;
+    margin: 35px auto 0 auto;
+    gap: 40px;
 }
 
 /* //////////////// 베스트 상품 시작 //////////////// */
@@ -174,6 +177,178 @@
     font-weight: 700;
 }
 /* ////////////////// 경로 네비게이션 끝 /////////////////// */
+
+/* //////////////// 장바구니 공통 영역 시작 //////////////// */
+/* 2단 레이아웃 */
+.order-grid {
+    display: grid;
+    grid-template-columns: 640px 280px;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: start;
+    min-height: 100%;
+}
+
+/* 항목별 컨테이너 */
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ///////////////// 장바구니 공통 영역 끝 ///////////////// */
+
+/* ////////////////// 주문/결제 영역 시작 ////////////////// */
+.order-section {
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+}
+
+.order-section h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+.order-item:last-child {
+    border-bottom: none; /* 마지막 상품은 줄 제거 */
+}
+
+.order-item img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.order-info {
+    flex: 1;
+}
+
+.order-name {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.order-sub {
+    font-size: 13px;
+    color: var(--gray-600);
+    margin-bottom: 6px;
+}
+
+.order-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.order-price .discount {
+    color: red;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.order-price .sale {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.order-price .regular {
+    color: #888888;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.order-price .badge {
+    font-size: 13px;
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.order-total {
+    font-weight: 700;
+    color: var(--blue);
+    min-width: 120px;
+    text-align: right;
+}
+
+/* 전체 합계 영역 */
+.order-summary {
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 20px;
+    background: #fafafa;
+    position: sticky;
+    top: 100px;
+}
+
+.order-summary h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.order-summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px;
+}
+
+.order-summary li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.order-total {
+    text-align: right;
+    font-size: 18px;
+    border-top: 1px solid var(--border);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+}
+
+.order-total strong {
+    font-size: 20px;
+}
+
+.btn-order {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-order:hover {
+    background: #2454d1;
+}
+/* ////////////////// 주문/결제 영역 끝 ////////////////// */
 
 /* //////////////////// TOP 버튼 시작 //////////////////// */
 .top-btn {

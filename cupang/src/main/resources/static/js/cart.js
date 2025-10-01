@@ -29,7 +29,7 @@ function renderCart() {
         div.className = "cart-item";
         div.innerHTML = `
       <input type="checkbox" class="chk-item" data-id="${item.id}" checked>
-      <img src="/images/Hit-product_1.png" alt="상품">
+      <img src="/cupang/images/Hit-product_1.png" alt="상품">
       <div class="cart-info">
         <p class="cart-name">${item.name}
           <a href="#" class="btn-remove" data-id="${item.id}">삭제</a>
