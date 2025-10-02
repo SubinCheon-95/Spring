@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (confirmed) {
             // 주문 완료 페이지로 이동
-            window.location.href = "/cupang/orderComplete";
+            window.location.href = "/cupang/prodComplete";
         }
     });
 
