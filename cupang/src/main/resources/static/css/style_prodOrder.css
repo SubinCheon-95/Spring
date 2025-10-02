@@ -138,6 +138,38 @@
     margin-bottom: 20px;
 }
 
+/* ////////////////// 구매자 정보 부분 ////////////////// */
+.buyer-box {
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.buyer-info .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.buyer-info .form-row label {
+    width: 100px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #333;
+}
+
+.buyer-info .form-row input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-size: 14px;
+    background: #f9fafb;
+}
+/* /////////////////// 구매자 정보 끝 /////////////////// */
+
 /* ////////////////// 배송지 정보 부분 ////////////////// */
 .delivery-box {
     border: 1px solid var(--border);
@@ -153,63 +185,9 @@
     font-weight: 500;
 }
 
-.delivery-box input,
-.delivery-box select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    font-size: 14px;
-}
-
-.delivery-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.delivery-header h3 {
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.delivery-header .btn-change {
-    padding: 4px 10px;
-    font-size: 13px;
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    background: #f9fafb;
-    cursor: pointer;
-}
-
-.delivery-header .btn-change:hover {
-    background: #f3f4f6;
-}
-
-.delivery-info p {
-    margin: 4px 0;
-    font-size: 14px;
-    color: var(--gray-700);
-}
-
-.delivery-info .receiver {
-    font-weight: 700;
-    font-size: 15px;
-}
-
-.delivery-info .memo {
-    width: 100%;
-    margin-top: 10px;
-    padding: 8px;
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    font-size: 14px;
-}
-
 .delivery-info .form-row {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 10px;
 }
@@ -218,7 +196,7 @@
     width: 100px;         /* 항목 라벨 고정 폭 */
     font-weight: 700;     /* Bold */
     font-size: 14px;
-    color: #333;
+    color: #333333;
 }
 
 .delivery-info .form-row input,
@@ -231,23 +209,47 @@
 }
 
 .delivery-info .form-row button {
+    height: 34px;
     margin-left: 8px;
-    padding: 6px 12px;
+    padding: 0 12px;
     font-size: 13px;
     border: 1px solid var(--border);
     border-radius: 3px;
     background: #ffffff;
     cursor: pointer;
+    line-height: 1;
 }
 
-.save-default {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 8px;
-    font-size: 13px;
-    color: var(--gray-700);
+/* 배송 메모 영역 */
+.memo-wrap {
+    flex: 1;
+    display: inline-block;
+    position: relative;
 }
+
+.memo-wrap select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.memo-wrap .chevron-down {
+    width: 4%;
+    height: auto;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    stroke: var(--gray-600);
+}
+/* 배송 메모 끝 */
 /* ////////////////// 배송지 정보 끝 ////////////////// */
 
 /* ////////////////// 상품 정보 시작 ////////////////// */
@@ -343,7 +345,7 @@
     flex: 1;
     padding: 6px;
     border: 1px solid var(--border);
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 .point-box button {

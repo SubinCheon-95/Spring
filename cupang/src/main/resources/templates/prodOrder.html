@@ -61,7 +61,7 @@
                     <nav class="cart-steps">
                         <ol>
                             <li><a href="#">01 옵션선택</a></li>
-                            <li><a href="#">02 장바구니</a></li>
+                            <li><a th:href="@{/prodCart}">02 장바구니</a></li>
                             <li class="active">03 주문/결제</li>
                             <li><a href="#">04 주문완료</a></li>
                         </ol>
@@ -72,6 +72,27 @@
                 <div class="order-grid">
                     <!-- 좌측: 주문 상세 -->
                     <div class="order-list">
+
+                        <!-- 구매자 정보 -->
+                        <div class="order-section buyer-box">
+                            <div class="section-header">
+                                <h3>구매자 정보</h3>
+                            </div>
+                            <div class="buyer-info">
+                                <div class="form-row">
+                                    <label for="buyerName">이름</label>
+                                    <input type="text" id="buyerName" placeholder="이름 입력">
+                                </div>
+                                <div class="form-row">
+                                    <label for="buyerPhone">연락처</label>
+                                    <input type="text" id="buyerPhone" placeholder="연락처 입력">
+                                </div>
+                                <div class="form-row">
+                                    <label for="buyerAddress">주소지</label>
+                                    <input type="text" id="buyerAddress" placeholder="주소 입력">
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- 배송지 정보 -->
                         <div class="order-section delivery-box">
@@ -103,12 +124,19 @@
                                 </div>
                                 <div class="form-row">
                                     <label for="memo">배송 메모</label>
-                                    <select id="memo">
-                                        <option>배송 메모를 선택해주세요</option>
-                                        <option>부재 시 경비실에 맡겨주세요</option>
-                                        <option>문 앞에 놓아주세요</option>
-                                        <option>배송 전 연락 부탁드립니다</option>
-                                    </select>
+                                    <div class="memo-wrap">
+                                        <select id="memo">
+                                            <option>배송 메모를 선택해주세요</option>
+                                            <option>부재 시 경비실에 맡겨주세요</option>
+                                            <option>문 앞에 놓아주세요</option>
+                                            <option>배송 전 연락 부탁드립니다</option>
+                                        </select>
+                                        <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="m6 9 6 6 6-6"/>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         </div>

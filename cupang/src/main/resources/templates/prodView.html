@@ -17,6 +17,8 @@
     <script th:src="@{/js/category.js}" defer></script>
     <!-- 베스트상품 온앤오프 & 스크롤 기능 -->
     <script th:src="@{/js/best.js}" defer></script>
+    <!-- 상품 상세 페이지 스크롤 기능 -->
+    <script th:src="@{/js/view-scroll.js}" defer></script>
     <!-- 상품 상세 페이지 옵션 기능-->
     <script th:src="@{/js/option.js}" defer></script>
     <!-- 토스트 메세지 기능 -->
@@ -221,12 +223,12 @@
             </div>
 
             <!-- 상품상세 이미지 -->
-            <div class="prod-detail-img container">
+            <div id="detailSection" class="prod-detail-img container">
                 <img th:src="@{/images/Hit-product_1-1.jpg}" alt="상품 상세 이미지">
             </div>
 
             <!-- 상품평 -->
-            <div class="prod-review">
+            <div id="reviewSection" class="prod-review">
                 <h3>상품평</h3>
                 <p class="sub-text">동일한 상품에 대해 작성된 상품평으로, 판매자는 다를 수 있습니다.</p>
                 <div class="big-stars">

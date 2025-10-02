@@ -145,7 +145,7 @@ function updateSummary() {
             return cartData.find(i => i.id === id);
         });
         localStorage.setItem("orderData", JSON.stringify(orderItems));
-        window.location.href = "/order";
+        window.location.href = "/cupang/prodOrder";
     });
 }
 
