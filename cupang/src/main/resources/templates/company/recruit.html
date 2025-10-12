@@ -1,0 +1,82 @@
+<div th:replace="~{company/_head.html}"></div>
+
+    <main>
+
+        <a href="#" class="scroll-down">
+            <div class="scroll">
+                <span class="scroll-dot"></span>
+            </div>
+            <div class="arrow-down"></div>
+        </a>
+
+        <div class="board">
+            
+            <div class="highlight">
+                큐팡과 함께 성장할 당신을 기다립니다.
+            </div>
+
+            <div class="subtext">
+                <p>큐팡과 함께 혁신적인 아이디어를 실현하며 성장할 당신을 기다립니다.</p>
+                <p>열린 소통과 협력을 통해 다양한 도전을 경험하고, 역량을 마음껏 발휘하세요.</p>
+                <p>즐거움과 배움이 공존하는 환경에서, 함께 더 나은 내일을 만들어갑니다.</p>
+            </div>
+
+            <table class="recruit-table">                        
+                <tr>
+                    <th class="col-num">번호</th>
+                    <th class="col-dept">채용부서</th>
+                    <th class="col-career">경력사항</th>
+                    <th class="col-type">채용형태</th>
+                    <th class="col-title">제목</th>
+                    <th class="col-status">상태</th>
+                    <th class="col-period">모집기간</th>
+                </tr>    
+                <tr>
+                    <td class="col-num">1</td>
+                    <td class="col-dept">경영</td>
+                    <td class="col-career">신입</td>
+                    <td class="col-type">계약직</td>
+                    <td class="col-title">경영지원 직원 채용공고</td>
+                    <td class="col-status status-open">모집중</td>
+                    <td class="col-period">0000-00-00 ~ 0000-00-00</td>
+                </tr>
+                 <tr>
+                    <td class="col-num">1</td>
+                    <td class="col-dept">경영</td>
+                    <td class="col-career">신입</td>
+                    <td class="col-type">계약직</td>
+                    <td class="col-title">경영지원 직원 채용공고</td>
+                    <td class="col-status status-closed">종료</td>
+                    <td class="col-period">0000-00-00 ~ 0000-00-00</td>
+                </tr>
+            </table>
+
+            <div class="page">
+                <div class="prev">
+                    <a href="#" class="paging">
+                        <img th:src="@{/images/company/btn-first-page.png}">
+                    </a>
+                    <a href="#" class="paging">
+                        <img th:src="@{/images/company/btn-prev-page.png}">
+                    </a>
+                </div>
+                <div class="pagenumber">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                </div>
+                <div class="last">
+                    <a href="#" class="paging">
+                        <img th:src="@{/images/company/btn-next-page.png}">
+                    </a>
+                    <a href="#" class="paging">
+                        <img th:src="@{/images/company/btn-last-page.png}">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+    <div th:replace="~{company/_tail.html}"></div>
