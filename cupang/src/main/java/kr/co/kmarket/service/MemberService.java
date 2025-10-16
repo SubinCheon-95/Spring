@@ -14,8 +14,6 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Service
 public class MemberService {
-
-
     private final MemberMapper memberMapper;
 
     private final PasswordEncoder passwordEncoder;
@@ -26,6 +24,10 @@ public class MemberService {
         memberDTO.setPw(encodedPass);
         memberMapper.insertMember(memberDTO);
     }
+    public void saveSocial(MemberDTO memberDTO){
+        memberDTO.setPw(passwordEncoder.encode("SOCIAL_USER"));
+        memberMapper.insertMember(memberDTO);
+    }
 
     public MemberDTO getUser(String custid){
         return memberMapper.findByCustid(custid);
@@ -33,6 +35,10 @@ public class MemberService {
 
     public MemberDTO getUserIdInfo(String name, String email){
         return memberMapper.findCustIdInfo(name, email);
+    }
+
+    public MemberDTO getUserIdInfoHp(String name, String hp){
+        return memberMapper.findCustIdInfoHp(name, hp);
     }
 
     public int countUser(String type, String value){
@@ -58,6 +64,10 @@ public class MemberService {
 
     public List<PolicyDTO> getAllPolicies(){
         return memberMapper.selectAllPolicy();
+    }
+
+    public MemberDTO login(String custid, String pw) {
+        return memberMapper.login(custid, pw);
     }
 
 }

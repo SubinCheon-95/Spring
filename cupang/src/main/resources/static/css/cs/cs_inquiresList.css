@@ -105,15 +105,9 @@ html, body { /* 기본 세팅 */
     justify-content:space-between;
     align-items:center;
 }
-.left, .right {
-    display: flex;
-}
-.left span {
-    margin-right: 20px;
-}
-.right span {
-    margin-left: 20px;
-}
+.left, .right {display: flex;}
+.left span:first-child {width:510px;}
+.right span {margin-left: 40px;}
 
 .pagenation {
     width: 100%;
@@ -158,17 +152,12 @@ html, body { /* 기본 세팅 */
     width: 10px;
     height: 10px;
 }
-.pagenation .first {
-    background-image: url('/Kmarket/images/cs/btn-first-page.png');
-}
+
 .pagenation .prev {
-    background-image: url('/Kmarket/images/cs/btn-prev-page.png');
+    background-image: url('/kmarket/images/cs/btn-prev-page.png');
 }
 .pagenation .next {
-    background-image: url('/Kmarket/images/cs/btn-next-page.png');
-}
-.pagenation .last {
-    background-image: url('/Kmarket/images/cs/btn-last-page.png');
+    background-image: url('/kmarket/images/cs/btn-next-page.png');
 }
 
 .inquires {

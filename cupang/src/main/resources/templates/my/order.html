@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Mypage Main</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <link rel="stylesheet" th:href="@{/css/my/main.css}">
-    <link rel="stylesheet" th:href="@{/css/my/modal/modal.css}">
-    <link rel="stylesheet" th:href="@{/css/my/modal/confirm-modal.css}">
-    <link rel="stylesheet" th:href="@{/css/my/modal/review-modal.css}">
-    <link rel="stylesheet" th:href="@{/css/my/modal/return-modal.css}">
-    <link rel="stylesheet" th:href="@{/css/my/modal/exchange-modal.css}">
-</head>
-<body>
-<main>
-    <div class="content-wraper">
-        <div class="top-info">
-            <div class="info-title">
-                <span>나의쇼핑정보</span>
-            </div>
-            <div class="status">
-                <table>
-                    <tr>
-                        <th>주문</th>
-                        <th>쿠폰</th>
-                        <th>포인트</th>
-                        <th>문의</th>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>1,000</td>
-                        <td>1</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+<div th:replace="~{my/_header.html}"></div>
         <div class="main-container">
             <div class="side-menu">
                 <div class="menu-list">
@@ -62,16 +25,19 @@
                     <table>
                         <tr>
                             <th>날짜</th>
+                            <th></th>
                             <th class="second-th">상품정보</th>
                             <th>상태</th>
                             <th>확인/신청</th>
                         </tr>
                         <tr>
                             <td>2022-12-13</td>
-                            <td class="second-td">
+                            <td>
                                 <div class="prod-img">
-                                    <img src="#" alt="상품사진">
+                                    <img th:src="@{/images/my/banner_ad.jpg}" alt="광고사진">
                                 </div>
+                            </td>
+                            <td class="second-td">
                                 <div class="prod-info">
                                     <p>주문번호 : 1012211341</p>
                                     <p>(주)  상호명</p>

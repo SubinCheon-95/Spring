@@ -1,5 +1,6 @@
 package kr.co.kmarket.security;
 
+import kr.co.kmarket.service.CustomOauth2UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -11,6 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.access.AccessDeniedHandlerImpl;
+import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
 
 @Configuration
 public class SecurityConfig {
@@ -18,12 +20,14 @@ public class SecurityConfig {
     @Autowired
     private MyUserDetailsService myUserDetailsService;
 
+    private final CustomLoginSuccessHandler successHandler = new CustomLoginSuccessHandler();
+
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain filterChain(HttpSecurity http, CustomOauth2UserService customOauth2UserService) throws Exception {
         // 로그인 설정
         http.formLogin(form -> form
                 .loginPage("/member/login")
-                .defaultSuccessUrl("/")
+                .successHandler(successHandler)
                 .failureUrl("/member/login?error=true")
                 .usernameParameter("custid")
                 .passwordParameter("pw")
@@ -36,11 +40,11 @@ public class SecurityConfig {
                 .logoutSuccessUrl("/member/login?logout=true"));
 
         // 자동 로그인
-        http.rememberMe(rem -> rem
+        /* http.rememberMe(rem -> rem
                 .key("uniqueKey")
                 .tokenValiditySeconds(86400)
                 .userDetailsService(myUserDetailsService)
-        );
+        ); */  // 임시로 자동로그인 주석처리했습니다.
 
         // 세션 만료 시 이동
         http.sessionManagement(session -> session
@@ -58,6 +62,16 @@ public class SecurityConfig {
         // 권한 없는 사용자 접근
         http.exceptionHandling(exception -> exception
                 .accessDeniedHandler(new CustomAccessDeniedHandler())
+        );
+
+        // 소셜 로그인
+        http.oauth2Login(oauth -> oauth
+                .loginPage("/member/login")
+                .userInfoEndpoint(userInfo -> userInfo
+                        .userService(customOauth2UserService)
+                )
+                .defaultSuccessUrl("/")
+                .failureUrl("/member/login?error=true")
         );
 
         // 기타 설정

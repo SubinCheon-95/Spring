@@ -11,10 +11,10 @@
     }
 
       .container {
-      display: flex;
-      padding-left: 20px;
-      padding-right: 40px;
-      height: 800px;
+          display: flex;
+          min-height: 80vh;
+          margin: 0 auto;
+          max-width: 1200px;
     }
         /*///////////////헤더 푸터 삽입 시 공백 제거///////////////////*/
 html, body {
@@ -23,7 +23,7 @@ html, body {
 }
 
     /* 메인 콘텐츠 */
-    .content { flex: 1; padding-left: 40px; background-color: #fff; }
+    .content { flex: 1; padding: 20px; background-color: #fff; }
     .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; border-bottom: 2px solid #000; padding-bottom: 10px; }
     .header-top h1 { font-size: 20px; margin: 0; }
     .breadcrumb { font-size: 14px; }
@@ -239,30 +239,22 @@ html, body {
     .btn { padding: 6px 12px; background-color: #3693c2; color: white; border: none; cursor: pointer; }
     .btn2 { padding: 6px 12px; background-color: #bfbfbf; color: white; border: none; cursor: pointer; }
     .btn:hover { background-color: #2980b9; }
+
+    #notice_type {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        padding: 5px;
+        width: 130px;
+    }
   </style>
 </head>
 <head>
-<!-- header/footer css -->
+    <!-- header/footer css -->
     <link rel="stylesheet" th:href="@{/css/admin/main/header_footer.css}">
 
-    <!-- 사이드바 동작 js 및 css -->
-    <!-- 1. 사이드바 필요 시 admin.html main 부분 aside영역 복붙
-         2. main부분 영역 담당 레이아웃에
-              display: flex;
-              align-items: stretch;
-              추가해야 푸터까지 늘어남
-         3. 사이드바 추가 시 푸터랑 붙어있으므로 본인 영역에 맞게 마진 주기
-            (footer에다 margin-top주면 사이드바 안늘어남)
-            margin-bottom: 120px;
-    -->
     <script th:src="@{/js/admin/cs/recruit/sidebarAction.js}" defer></script>
     <link rel="stylesheet" th:href="@{/css/admin/main/sidebar.css}">
-
-    <!-- 개인 필요 및 작업 css, js -->
-    <link rel="stylesheet" th:href="@{/css/admin/cs/recruit/Recruit.css}">
-    <script th:src="@{/js/admin/cs/recruit/checkboxAction.js}" defer></script>
-    <script th:src="@{/js/admin/cs/recruit/sidebarAction.js}" defer></script>
-
 </head>
 <body>
 <div class="header-layout">
@@ -391,7 +383,13 @@ html, body {
         <tr>
           <th>유형</th>
           <td>
-            <input type="text" value="고객서비스" class="input-box" readonly>
+              <select name="notice_type" id="notice_type">
+                  <option>유형선택</option>
+                  <option value="고객서비스">고객서비스</option>
+                  <option value="안전거래">안전거래</option>
+                  <option value="위해상품">위해상품</option>
+                  <option value="이벤트 당첨">이벤트 당첨</option>
+              </select>
           </td>
         </tr>
         <!-- 제목 입력 가능 -->
@@ -419,7 +417,7 @@ html, body {
     </table>
 
     <div class="bottom-bar">
-      <button class="btn2">취소하기</button>
+      <button class="btn2" th:onclick="|location.href='@{/admin/cs/notice/list}'|">취소하기</button>
       <button class="btn">등록하기</button>
     </div>
   </div>

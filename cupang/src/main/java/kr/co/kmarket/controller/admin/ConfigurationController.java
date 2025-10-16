@@ -1,11 +1,9 @@
 package kr.co.kmarket.controller.admin;
 
-import jakarta.servlet.http.HttpSession;
-import kr.co.kmarket.dto.PageRequestDTO;
-import kr.co.kmarket.dto.PageResponseDTO;
-import kr.co.kmarket.dto.PolicyDTO;
-import kr.co.kmarket.dto.VersionDTO;
+import kr.co.kmarket.controller.GlobalController;
+import kr.co.kmarket.dto.*;
 import kr.co.kmarket.service.PolicyService;
+import kr.co.kmarket.service.admin.BasicService;
 import kr.co.kmarket.service.admin.VersionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -29,9 +27,18 @@ import java.util.Map;
 public class ConfigurationController {
     private final PolicyService policyService;
     private final VersionService versionService;
+    private final BasicService basicService;
+    private final GlobalController globalController;
 
     @GetMapping("/basic")
-    public String basic() {return "admin/configuration/admin_basicSetting";}
+    public String basic(Model model) {
+        String recentVersion = basicService.getRecentVersion();
+        model.addAttribute("recentVersion", recentVersion);
+
+        return "admin/configuration/admin_basicSetting";
+    }
+
+
 
     @GetMapping("/banner")
     public String banner() {return "admin/configuration/admin_banner";}
@@ -57,7 +64,6 @@ public class ConfigurationController {
     public String policyUpdate(PolicyDTO policyDTO) {
         log.info("policyDTO = {}", policyDTO);
         policyService.updatePolicy(policyDTO);
-        log.info(policyDTO.toString());
 
         return "redirect:/admin/config/policy";
     }
@@ -88,7 +94,7 @@ public class ConfigurationController {
 
     @PostMapping("/version")
     @ResponseBody
-    public Map<String, Object> versionInsert(@RequestBody VersionDTO versionDTO, HttpSession session) {
+    public Map<String, Object> versionInsert(@RequestBody VersionDTO versionDTO) {
         log.info("versionDTO = {}", versionDTO);
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();

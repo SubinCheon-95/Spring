@@ -1,289 +1,150 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- 1차 2차선택 구현하기-->
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>공지사항 목록</title>
-  <style>
-    /* 기본 리셋 및 폰트 */
-    html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <title>공지사항 목록</title>
+    <link rel="stylesheet" th:href="@{/css/admin/cs/qna/inquryList.css}">
+    <link rel="stylesheet" th:href="@{/css/admin/main/header_footer.css}">
 
-    body {
-        display: flex;
-        flex-direction: column;
-    }
+    <script th:src="@{/js/admin/cs/recruit/sidebarAction.js}" defer></script>
+    <link rel="stylesheet" th:href="@{/css/admin/main/sidebar.css}">
 
-    /* 헤더 */
-    .header-layout{
-        height: 60px;
-        width: 100%;
-        background-color: #325a83;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-    }
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            //체크박스 전체 선택
+            const allSelect = document.querySelector(".all_select");
+            const checkboxes = document.querySelectorAll("tbody input[type='checkbox']");
 
-    .header-content{
-        width: 80%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+            allSelect.addEventListener("change", function() {
+                checkboxes.forEach(cb => cb.checked = allSelect.checked);
+            });
 
-    .header-content img{
-        width: 200px;
-    }
+            //1차,2차 카테고리
+            const category_box = {
+                "member": {"register" : "가입", //회원
+                    "withdrawal" : "탈퇴",
+                    "info" : "회원정보", "login" : "로그인"
+                },
+                "benefit": {"couponAndDiscount" : "쿠폰 / 할인혜택", //쿠폰 / 혜택 / 이벤트
+                    "point" : "포인트",
+                    "partnership" : "제휴",
+                    "event" : "이벤트"
+                },
+                "orderAndPay": {"product" : "상품", //주문 / 결제
+                    "pay" : "결제",
+                    "buyList" : "구매내역",
+                    "receipt" : "영수증 / 증빙"
+                },
+                "deliver": {"statusAndPeriod" : "배송상태 / 기간",  //배송
+                    "checkAndChange" : "배송정보확인 / 변경",
+                    "foreign" : "해외배송",
+                    "day" : "당일배송",
+                    "direct" : "해외직구"
+                },
+                "cancelAndReturnAndExchange": {"returnAndWithdrawal": "반품신청 / 철회", //취소 / 반품 / 교환
+                    "returnAndChange" : "반품정보확인 / 변경",
+                    "exchangeAndWithdrawal" : "교환 AS신청 / 철회",
+                    "exchangeAndChange" : "교환정보확인 / 변경",
+                    "cancelAndWithdrawal": "취소신청 / 철회",
+                    "cancelAndRefund" : "취소확인 / 환불정보"
+                },
+                "traverlAndAccommodationAndAviation": {"travel" : "여행 / 숙박", //여행 / 숙박 / 항공
+                    "flight": "항공"
+                },
+                "Safetrade": {"service" : "서비스 이용규칙 위반", //안전거래
+                    "knowledge" : "지식재산권침해",
+                    "contraveningGoods" : "법령 및 정책위반 상품",
+                    "article" : "게시물 정책위반",
+                    "induction" : "직거래 / 외부거래유도",
+                    "advertising" : "표시광고",
+                    "teenager" : "청소년 위해상품 / 이미지"
+                }
+            };
+            const category1 = document.getElementById("category1");
+            const category2 = document.getElementById("category2");
+            category2.innerHTML = '<option>2차 선택</option>';
 
-    .header-link {
-        display: flex;
-        gap: 25px;
-        align-items: center;
-    }
+            category1.addEventListener("change", function() {
+                const selected = this.value;
+                category2.innerHTML = '<option>2차 선택</option>';
 
-    .header-link p {
-        margin: 0;
-    }
+                if(category_box[selected]) {
+                    for(const key in category_box[selected]) {
+                        const option = document.createElement("option");
+                        option.value = key; // 영어 키
+                        option.textContent = category_box[selected][key]; // 한국어 표시
+                        category2.appendChild(option);
+                    }
+                }
+            });
+            category2.addEventListener("change", function() {
+                const cat1 = category1.value;
+                const cat2 = this.value;
+                if(cat2) {
+                    window.location.href = `/kmarket/admin/cs/qna/list/${cat1}/${cat2}`;
+                }
+            });
 
-    .header-link a, .header-link button {
-        text-decoration: none;
-        color: white;
-        font-weight: 500;
-        font-size: 10px;
-    }
+            //상태 - 검토중, 답변완료 구현
+            const check_s = document.querySelectorAll(".check");
+            check_s.forEach(check => {
+                if(check.innerText === "waiting") {
+                    check.style.color = "#808080";
+                    check.innerText = "검토중";
+                } else {
+                    check.style.color = "#0070C0";
+                    check.innerText = "답변완료";
+                }
+            });
 
-    .header-link button {
-        border: none;
-        outline: none;
-        background-color: #91a9ce;
-        padding: 5px 15px;
-        cursor: pointer;
-    }
+            //삭제 기능
+            const deleteBtn = document.querySelector(".select_delete");
+            deleteBtn.addEventListener("click", async () => {
+                const selected = document.querySelectorAll("tbody .row-checkbox:checked");
+                const idList = Array.from(selected).map(cb => cb.value);
+                console.log("삭제 id리스트: ", idList);
 
-    /* 메인 + 사이드바 영역 */
-    .container {
-        display: flex;
-        flex: 1; /* 화면 남은 영역 차지 */
-        background-color: #f5f5f5;
-    }
+                const response = await fetch("/kmarket/admin/cs/qna/list", {
+                    method: "DELETE",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(idList)
+                });
 
-    /* 사이드바 */
-    .sidebar {
-        width: 200px;
-        display: flex;
-        flex-direction: column;
-        background-color: #e0e0e0;
-    }
-
-    .side-item {
-        border-bottom: 1px solid #ccc;
-    }
-
-    .main-menu {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    .main-menu p {
-        margin: 0;
-        font-size: 15px;
-        color: black;
-    }
-
-    .sub-menu {
-        display: none;
-        flex-direction: column;
-        gap: 6px;
-        padding-left: 20px;
-    }
-
-    .sub-menu.active {
-        display: flex;
-    }
-
-    .sub-menu a {
-        color: black;
-        font-size: 14px;
-        text-decoration: none;
-    }
-    .main-menu svg{
-    width: 17px;
-    height: 17px;
-    margin-right: 10px;
-}
-
-    /* 메인 콘텐츠 */
-    .content {
-        flex: 1;
-        padding: 20px;
-        background-color: #fff;
-        overflow: auto;
-    }
-
-    .header-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        border-bottom: 2px solid #000;
-        padding-bottom: 10px;
-    }
-
-    .header-top h1 {
-        font-size: 20px;
-        margin: 0;
-    }
-
-    .breadcrumb {
-        font-size: 14px;
-    }
-
-    .breadcrumb a {
-        text-decoration: none;
-        color: #007bff;
-    }
-
-    .breadcrumb span {
-        color: #555;
-    }
-
-    .breadcrumb a:hover {
-        text-decoration: underline;
-    }
-
-    .search-bar {
-        margin-bottom: 10px;
-    }
-
-    .search-bar select,
-    .search-bar input {
-        padding: 5px;
-        margin-right: 5px;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 14px;
-    }
-
-    th, td {
-        border: 1px solid #ddd;
-        padding: 10px;
-        text-align: center;
-    }
-
-    th {
-        background-color: #f0f0f0;
-    }
-
-    .bottom-bar {
-        margin-top: 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .pagination {
-        display: flex;
-        gap: 5px;
-        margin: 0 auto;
-    }
-
-    .pagination a {
-        text-decoration: none;
-        color: #000;
-    }
-
-    .btn {
-        padding: 6px 12px;
-        background-color: #3693c2;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
-    .btn2 {
-        padding: 6px 12px;
-        background-color: #bfbfbf;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
-    .btn:hover {
-        background-color: #2980b9;
-    }
-
-    .completed {
-        color: #007bff;
-        font-weight: bold;
-    }
-
-    /* 푸터 */
-    .footer-layout{
-        height: 110px;
-        width: 100%;
-        background-color: #325a83;
-        flex-shrink: 0; /* 푸터가 줄어들지 않게 고정 */
-    }
-
-    .footer-content{
-        width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        padding-top: 15px;
-        text-align: center;
-        gap: 2px;
-    }
-
-    .footer-content img{
-        width: 150px;
-        display: block;
-        margin: 0 auto;
-    }
-
-    .about-company{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .footer-content h2{
-        font-size: 12px;
-        color: #fff;
-        font-weight: 400;
-        margin: 0 2px;
-    }
-
-    .footer-content a{
-        color: white;
-        font-size: 13px;
-    }
-
-  </style>
+                if(response.ok) {
+                    alert("삭제 완료!");
+                    location.reload();
+                } else {
+                    alert("삭제 실패!");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 
 <header>
     <div class="header-layout">
         <div class="header-content">
-            <a href="#">
-                <img src="logo.png" alt="로고">
+            <a th:href="@{/admin}">
+                <img th:src="@{/images/admin/main/cupangMS_logo(color).png}" alt="로고">
             </a>
             <div class="header-link">
                 <div class="header-item">
-                    <a href="#">
+                    <a th:href="@{/}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
                         <p>HOME</p>
                     </a>
                 </div>
+
+                <div class="header-item">
+                    <a th:href="@{/cs/index}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headset-icon lucide-headset"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></svg>
+                        <p>고객센터</p>
+                    </a>
+                </div>
+
                 <button>로그아웃</button>
             </div>
         </div>
@@ -374,29 +235,31 @@
         <div class="header-top">
             <h1>문의하기 목록</h1>
             <div class="breadcrumb">
-                <a href="#">HOME</a> &gt; 
-                <a href="#">고객센터</a> &gt; 
+                <a href="#">HOME</a> &gt;
+                <a href="#">고객센터</a> &gt;
                 <span>문의하기</span>
             </div>
         </div>
 
         <div class="search-bar">
-            <select>
-                <option>1차선택</option>
-                <option>회원</option>
-                <option>비회원</option> 
+            <select name="type1" id="category1">
+                <option>1차 선택</option>
+                <option value="member">회원</option>
+                <option value="benefit">쿠폰 / 이벤트</option>
+                <option value="orderAndPay">주문 / 결제</option>
+                <option value="deliver">배송</option>
+                <option value="cancelAndReturnAndExchange">취소 / 반품 / 교환</option>
+                <option value="traverlAndAccommodationAndAviation">여행 / 숙박 / 항공</option>
+                <option value="Safetrade">안전거래</option>
             </select>
-            <select>
-                <option>2차선택</option>
-                <option>가입</option>
-                <option>탈퇴</option> 
+            <select name="type2" id="category2">
             </select>
         </div>
 
         <table>
             <thead>
                 <tr>
-                    <th><input type="checkbox"></th>
+                    <th><input type="checkbox" class="all_select"></th>
                     <th>번호</th>
                     <th>1차유형</th>
                     <th>2차유형</th>
@@ -407,49 +270,41 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>10</td>
-                    <td>회원</td>
-                    <td>가입</td>
-                    <td>개인회원과 법인회원에 차이가 있나요 ?</td>
-                    <td>dream</td>
-                    <td>2025.09.30.</td>
-                    <td>검토 중</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>9</td>
-                    <td>회원</td>
-                    <td>가입</td>
-                    <td>개인회원과 법인회원에 차이가 있나요 ?</td>
-                    <td>dream</td>
-                    <td>2025.09.30.</td>
-                    <td>검토 중</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>8</td>
-                    <td>회원</td>
-                    <td>탈퇴</td>
-                    <td>회원 탈퇴 후 재가입 가능</td>
-                    <td>dream</td>
-                    <td>2025.09.30.</td>
-                    <td class="completed">답변 완료</td>
+                <tr th:each="qna, stat:${pageResponseDTO.dtoList}">
+                    <td><input type="checkbox" class="row-checkbox" th:value="${qna.id}"></td>
+                    <td>[[${qna.id}]]</td>
+                    <td>[[${qna.type1}]]</td>
+                    <td>[[${qna.type2}]]</td>
+                    <td> <!-- 검토중일 경우 reply로 작성, 답변완료일 경우 view로 보기 -->
+                        <a th:if="${qna.status == 'waiting'}"
+                           th:href="@{/admin/cs/qna/reply(id=${qna.id})}">[[${qna.title}]]
+                        </a>
+                        <a th:if="${qna.status == 'complete'}"
+                           th:href="@{/admin/cs/qna/view(id=${qna.id})}">[[${qna.title}]]
+                        </a>
+                    </td>
+                    <td th:text="${#strings.substring(qna.user_id, 0, 3) + #strings.repeat('*', #strings.length(qna.user_id) - 3)}"></td>
+                    <td th:text="${#temporals.format(qna.reg_date, 'yy.MM.dd')}"></td>
+                    <td class="check">[[${qna.status}]]</td>
                 </tr>
             </tbody>
         </table>
 
         <div class="bottom-bar">
-            <button class="btn2">선택삭제</button>
+            <button class="btn2 select_delete">선택삭제</button>
             <div class="pagination">
-                <a href="#">이전</a>
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">다음</a>
+                <a th:if="${pageResponseDTO.prev}"
+                   th:href="@{/admin/cs/qna/list(pg=${pageResponseDTO.start - 1})}" class="arrow">
+                    <span class="prev"></span>
+                </a>
+                <th:block th:if="${pageResponseDTO.total > 0}" th:each="num:${#numbers.sequence(pageResponseDTO.start, pageResponseDTO.end)}">
+                        <a th:href="@{/admin/cs/qna/list (pg=${num})}"
+                           th:class="${num == pageResponseDTO.pg ? 'active2' : 'pageNum'}">[[${num}]]</a>
+                </th:block>
+                <a th:if="${pageResponseDTO.next}"
+                   th:href="@{/admin/cs/qna/list(pg=${pageResponseDTO.end + 1})}" class="arrow">
+                    <span class="next"></span>
+                </a>
             </div>
         </div>
     </div>
@@ -485,11 +340,7 @@
             </div>
             <h2>Copyright@cupang.All.rights.reserved (db)</h2>
         </div>
-
     </div>
-
 </footer>
-
-
 </body>
 </html>
